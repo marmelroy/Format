@@ -9,7 +9,7 @@
 import Foundation
 import Contacts
 
-func formatAddress(street: String?, city: String?, state: String?, postalCode: String?, country: String?, ISOCountryCode: String?) -> String{
+public func formatAddress(street: String?, city: String?, state: String?, postalCode: String?, country: String?, ISOCountryCode: String?) -> String{
     let postalAddress = CNMutablePostalAddress()
     if let streetString = street {
         postalAddress.street = streetString
