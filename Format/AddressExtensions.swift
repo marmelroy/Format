@@ -8,32 +8,21 @@
 
 import Foundation
 import CoreLocation
-import Contacts
 import AddressBook
 
 public extension CLPlacemark {
     public func format() -> String {
-        let postalAddress = CNMutablePostalAddress()
+        // Uses deprectaed Address book keys since there's no interoperability between CLPlacemark and ContactsKit yet.
         let addressDict = self.addressDictionary!
-        if let street = addressDict[kABPersonAddressStreetKey] as? String {
-            postalAddress.street = street
-        }
-        if let city = addressDict[kABPersonAddressCityKey] as? String {
-            postalAddress.city = city
-        }
-        if let state = addressDict[kABPersonAddressStateKey] as? String {
-            postalAddress.state = state
-        }
-        if let postalCode = addressDict[kABPersonAddressZIPKey] as? String {
-            postalAddress.postalCode = postalCode
-        }
-        if let country = addressDict[kABPersonAddressCountryKey] as? String {
-            postalAddress.country = country
-        }
-        if let ISOcountryCode = addressDict[kABPersonAddressCountryCodeKey] as? String {
-            postalAddress.ISOCountryCode = ISOcountryCode
-        }
-        print(postalAddress)
-        return "Boom"
+        var formattedString: String = ""
+        let street = addressDict[kABPersonAddressStreetKey] as? String
+        let city = addressDict[kABPersonAddressCityKey] as? String
+        let state = addressDict[kABPersonAddressStateKey] as? String
+        let postalCode = addressDict[kABPersonAddressZIPKey] as? String
+        let country = addressDict[kABPersonAddressCountryKey] as? String
+        let ISOCountryCode = addressDict[kABPersonAddressCountryCodeKey] as? String
+
+        formattedString = formatAddress(street, city: city, state: state, postalCode: postalCode, country: country, ISOCountryCode: ISOCountryCode)
+        return formattedString
     }
 }

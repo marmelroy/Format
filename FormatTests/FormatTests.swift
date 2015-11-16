@@ -27,8 +27,8 @@ class FormatTests: XCTestCase {
     }
     
     func testAddress() {
-        let longitude = -2.387795
-        let latitude = 48.861059
+        let longitude: Double = 2.387795
+        let latitude: Double = 48.861059
         
         let location = CLLocation(latitude: latitude, longitude: longitude)
         let expectation = self.expectationWithDescription("REVERSE GEOCODED")

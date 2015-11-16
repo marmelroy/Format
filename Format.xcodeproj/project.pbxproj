@@ -13,11 +13,11 @@
 		340F3D2B1BF5E1DE000C2EA8 /* NumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340F3D2A1BF5E1DE000C2EA8 /* NumberExtensions.swift */; };
 		340F3D2D1BF5E1F1000C2EA8 /* Decimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340F3D2C1BF5E1F1000C2EA8 /* Decimals.swift */; };
 		340F3D2F1BF5E213000C2EA8 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340F3D2E1BF5E213000C2EA8 /* NumberFormatter.swift */; };
+		341F272E1BFA3D7800D83C8B /* AddressFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F272D1BFA3D7800D83C8B /* AddressFormatter.swift */; };
 		34201C811BF89E1900BB990D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34201C801BF89E1900BB990D /* AddressBook.framework */; };
 		345E9B741BF8826100A88BD7 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E9B731BF8826100A88BD7 /* Currency.swift */; };
 		345E9B761BF88CF900A88BD7 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E9B751BF88CF900A88BD7 /* General.swift */; };
 		345E9B781BF88F4500A88BD7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E9B771BF88F4500A88BD7 /* Constants.swift */; };
-		345E9B7B1BF8929200A88BD7 /* AddressFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E9B7A1BF8929200A88BD7 /* AddressFormatter.swift */; };
 		345E9B7D1BF892F900A88BD7 /* AddressExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E9B7C1BF892F900A88BD7 /* AddressExtensions.swift */; };
 		345E9B801BF8931B00A88BD7 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345E9B7F1BF8931B00A88BD7 /* Contacts.framework */; };
 		345E9B821BF8932000A88BD7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345E9B811BF8932000A88BD7 /* CoreLocation.framework */; };
@@ -43,11 +43,11 @@
 		340F3D2A1BF5E1DE000C2EA8 /* NumberExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberExtensions.swift; sourceTree = "<group>"; };
 		340F3D2C1BF5E1F1000C2EA8 /* Decimals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decimals.swift; sourceTree = "<group>"; };
 		340F3D2E1BF5E213000C2EA8 /* NumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
+		341F272D1BFA3D7800D83C8B /* AddressFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressFormatter.swift; sourceTree = "<group>"; };
 		34201C801BF89E1900BB990D /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		345E9B731BF8826100A88BD7 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		345E9B751BF88CF900A88BD7 /* General.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
 		345E9B771BF88F4500A88BD7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		345E9B7A1BF8929200A88BD7 /* AddressFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressFormatter.swift; sourceTree = "<group>"; };
 		345E9B7C1BF892F900A88BD7 /* AddressExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressExtensions.swift; sourceTree = "<group>"; };
 		345E9B7F1BF8931B00A88BD7 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 		345E9B811BF8932000A88BD7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -131,7 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				345E9B7C1BF892F900A88BD7 /* AddressExtensions.swift */,
-				345E9B7A1BF8929200A88BD7 /* AddressFormatter.swift */,
+				341F272D1BFA3D7800D83C8B /* AddressFormatter.swift */,
 			);
 			name = Address;
 			sourceTree = "<group>";
@@ -257,7 +257,7 @@
 				345E9B7D1BF892F900A88BD7 /* AddressExtensions.swift in Sources */,
 				345E9B741BF8826100A88BD7 /* Currency.swift in Sources */,
 				345E9B781BF88F4500A88BD7 /* Constants.swift in Sources */,
-				345E9B7B1BF8929200A88BD7 /* AddressFormatter.swift in Sources */,
+				341F272E1BFA3D7800D83C8B /* AddressFormatter.swift in Sources */,
 				345E9B761BF88CF900A88BD7 /* General.swift in Sources */,
 				340F3D2B1BF5E1DE000C2EA8 /* NumberExtensions.swift in Sources */,
 				340F3D2F1BF5E213000C2EA8 /* NumberFormatter.swift in Sources */,

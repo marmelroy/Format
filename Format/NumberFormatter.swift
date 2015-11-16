@@ -19,7 +19,7 @@ public protocol NumberFormatter {
     var type: NumberFormatterType { get }
 }
 
-func numberFormat(number: NSNumber, formatter: NumberFormatter) -> String{
+func formatNumber(number: NSNumber, formatter: NumberFormatter) -> String{
     var formattedString: String = ""
     let numberFormatter = NSNumberFormatter()
     if (formatter.type == .Decimal){
