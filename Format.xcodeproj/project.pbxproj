@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		340E40E71BFB3C200054B560 /* ColorFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340E40E61BFB3C200054B560 /* ColorFormatter.swift */; };
 		340F3D111BF5E17F000C2EA8 /* Format.h in Headers */ = {isa = PBXBuildFile; fileRef = 340F3D101BF5E17F000C2EA8 /* Format.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		340F3D181BF5E17F000C2EA8 /* Format.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 340F3D0D1BF5E17F000C2EA8 /* Format.framework */; };
 		340F3D1D1BF5E17F000C2EA8 /* FormatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340F3D1C1BF5E17F000C2EA8 /* FormatTests.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		340E40E61BFB3C200054B560 /* ColorFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorFormatter.swift; sourceTree = "<group>"; };
 		340F3D0D1BF5E17F000C2EA8 /* Format.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Format.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		340F3D101BF5E17F000C2EA8 /* Format.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Format.h; sourceTree = "<group>"; };
 		340F3D121BF5E17F000C2EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +77,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		340E40E21BFB3B9C0054B560 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				340E40E61BFB3C200054B560 /* ColorFormatter.swift */,
+			);
+			name = Color;
+			sourceTree = "<group>";
+		};
+		340E40E31BFB3BA10054B560 /* TimeInterval */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TimeInterval;
+			sourceTree = "<group>";
+		};
 		340F3D031BF5E17F000C2EA8 = {
 			isa = PBXGroup;
 			children = (
@@ -97,7 +114,9 @@
 			isa = PBXGroup;
 			children = (
 				345E9B791BF8927F00A88BD7 /* Address */,
+				340E40E21BFB3B9C0054B560 /* Color */,
 				340F3D271BF5E1B7000C2EA8 /* Numbers */,
+				340E40E31BFB3BA10054B560 /* TimeInterval */,
 				340F3D101BF5E17F000C2EA8 /* Format.h */,
 				345E9B7E1BF8930600A88BD7 /* Frameworks */,
 				340F3D121BF5E17F000C2EA8 /* Info.plist */,
@@ -256,6 +275,7 @@
 			files = (
 				345E9B7D1BF892F900A88BD7 /* AddressExtensions.swift in Sources */,
 				345E9B741BF8826100A88BD7 /* Currency.swift in Sources */,
+				340E40E71BFB3C200054B560 /* ColorFormatter.swift in Sources */,
 				345E9B781BF88F4500A88BD7 /* Constants.swift in Sources */,
 				341F272E1BFA3D7800D83C8B /* AddressFormatter.swift in Sources */,
 				345E9B761BF88CF900A88BD7 /* General.swift in Sources */,
