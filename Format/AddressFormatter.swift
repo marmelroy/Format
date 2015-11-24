@@ -9,8 +9,23 @@
 import Foundation
 import Contacts
 
+/// Address formatter class.
 public class AddressFormatter {
 
+    let postalFormatter = CNPostalAddressFormatter()
+
+    /**
+     Format address.
+     
+     - parameter street:         the street as a string
+     - parameter city:           the city as a string
+     - parameter state:          the state as a string
+     - parameter postalCode:     the postal code as a string
+     - parameter country:        the country name as a string
+     - parameter ISOCountryCode: the country's ISO code.
+     
+     - returns: Formatted address string using Contacts framework.
+     */
     public func format(street: String?, city: String?, state: String?, postalCode: String?, country: String?, ISOCountryCode: String?) -> String{
         let postalAddress = CNMutablePostalAddress()
         if let streetString = street {
@@ -31,7 +46,6 @@ public class AddressFormatter {
         if let ISOCountryCodeString = ISOCountryCode {
             postalAddress.ISOCountryCode = ISOCountryCodeString
         }
-        let postalFormatter = CNPostalAddressFormatter()
         return postalFormatter.stringFromPostalAddress(postalAddress)
     }
 
