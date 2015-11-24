@@ -22,7 +22,7 @@ public extension CLPlacemark {
         let country = addressDict[kABPersonAddressCountryKey] as? String
         let ISOCountryCode = addressDict[kABPersonAddressCountryCodeKey] as? String
 
-        formattedString = formatAddress(street, city: city, state: state, postalCode: postalCode, country: country, ISOCountryCode: ISOCountryCode)
+        formattedString = AddressFormatter().format(street, city: city, state: state, postalCode: postalCode, country: country, ISOCountryCode: ISOCountryCode)
         return formattedString
     }
 }
