@@ -23,7 +23,7 @@ class FormatTests: XCTestCase {
     }
     
     func testExample() {
-        print(45.format(General.SpellOut))
+        print(45.format(Distance.))
     }
     
     func testAddress() {

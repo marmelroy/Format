@@ -15,6 +15,7 @@
 		340F3D2D1BF5E1F1000C2EA8 /* Decimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340F3D2C1BF5E1F1000C2EA8 /* Decimals.swift */; };
 		340F3D2F1BF5E213000C2EA8 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340F3D2E1BF5E213000C2EA8 /* NumberFormatter.swift */; };
 		341F272E1BFA3D7800D83C8B /* AddressFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F272D1BFA3D7800D83C8B /* AddressFormatter.swift */; };
+		341FBCD91BFB9E6F009EB89F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 341FBCD81BFB9E6F009EB89F /* MapKit.framework */; };
 		34201C811BF89E1900BB990D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34201C801BF89E1900BB990D /* AddressBook.framework */; };
 		345E9B741BF8826100A88BD7 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E9B731BF8826100A88BD7 /* Currency.swift */; };
 		345E9B761BF88CF900A88BD7 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E9B751BF88CF900A88BD7 /* General.swift */; };
@@ -46,6 +47,7 @@
 		340F3D2C1BF5E1F1000C2EA8 /* Decimals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decimals.swift; sourceTree = "<group>"; };
 		340F3D2E1BF5E213000C2EA8 /* NumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		341F272D1BFA3D7800D83C8B /* AddressFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressFormatter.swift; sourceTree = "<group>"; };
+		341FBCD81BFB9E6F009EB89F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		34201C801BF89E1900BB990D /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		345E9B731BF8826100A88BD7 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		345E9B751BF88CF900A88BD7 /* General.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				341FBCD91BFB9E6F009EB89F /* MapKit.framework in Frameworks */,
 				34201C811BF89E1900BB990D /* AddressBook.framework in Frameworks */,
 				345E9B821BF8932000A88BD7 /* CoreLocation.framework in Frameworks */,
 				345E9B801BF8931B00A88BD7 /* Contacts.framework in Frameworks */,
@@ -83,13 +86,6 @@
 				340E40E61BFB3C200054B560 /* ColorFormatter.swift */,
 			);
 			name = Color;
-			sourceTree = "<group>";
-		};
-		340E40E31BFB3BA10054B560 /* TimeInterval */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = TimeInterval;
 			sourceTree = "<group>";
 		};
 		340F3D031BF5E17F000C2EA8 = {
@@ -116,7 +112,6 @@
 				345E9B791BF8927F00A88BD7 /* Address */,
 				340E40E21BFB3B9C0054B560 /* Color */,
 				340F3D271BF5E1B7000C2EA8 /* Numbers */,
-				340E40E31BFB3BA10054B560 /* TimeInterval */,
 				340F3D101BF5E17F000C2EA8 /* Format.h */,
 				345E9B7E1BF8930600A88BD7 /* Frameworks */,
 				340F3D121BF5E17F000C2EA8 /* Info.plist */,
@@ -158,6 +153,7 @@
 		345E9B7E1BF8930600A88BD7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				341FBCD81BFB9E6F009EB89F /* MapKit.framework */,
 				34201C801BF89E1900BB990D /* AddressBook.framework */,
 				345E9B811BF8932000A88BD7 /* CoreLocation.framework */,
 				345E9B7F1BF8931B00A88BD7 /* Contacts.framework */,

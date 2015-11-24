@@ -15,7 +15,10 @@ public enum Decimals: NumberFormatter {
     case Three
     case Four
     case Five
-    
+    case Six
+    case Seven
+    case Eight
+
     public var modifier: String {
         switch self {
         case None:
@@ -30,6 +33,12 @@ public enum Decimals: NumberFormatter {
             return ".4"
         case Five:
             return ".5"
+        case Six:
+            return ".6"
+        case Seven:
+            return ".7"
+        case Eight:
+            return ".8"
         }
     }
     
