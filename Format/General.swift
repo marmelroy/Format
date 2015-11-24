@@ -8,11 +8,15 @@
 
 import Foundation
 
+/**
+ *  General formatter.
+ */
 public enum General: NumberFormatter {
-    case Ordinal
-    case SpellOut
-    case Distance
+    case Ordinal // Ordinal number in the current locale (e.g. 18eme)
+    case SpellOut // Spells out the number in the current locale (e.g. Forty Two).
+    case Distance // Takes the source number as distance in meters. Display in current locale.
 
+    /// Modifier
     public var modifier: String {
         switch self {
         case Ordinal:
@@ -24,6 +28,7 @@ public enum General: NumberFormatter {
         }
     }
 
+    /// Type enum
     public var type: NumberFormatterType {
         return NumberFormatterType.General
     }

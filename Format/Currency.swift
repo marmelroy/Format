@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ *  Currency formatter
+ */
 public enum Currency: NumberFormatter {
     case ADP
     case AED
@@ -308,6 +311,7 @@ public enum Currency: NumberFormatter {
     case ZWL
     case ZWR
     
+    /// Modifier
     public var modifier: String {
         switch self {
         case ADP:
@@ -909,6 +913,7 @@ public enum Currency: NumberFormatter {
         }
     }
     
+    /// Type enum
     public var type: NumberFormatterType {
         return NumberFormatterType.Currency
     }

@@ -8,17 +8,28 @@
 
 import Foundation
 
-public func formatColor(hex: String) -> UIColor{
-    let scanner = NSScanner(string: hex)
-    scanner.charactersToBeSkipped = NSCharacterSet.alphanumericCharacterSet().invertedSet
-    
-    var value: UInt32 = 0;
-    scanner.scanHexInt(&value)
-    
-    let red = CGFloat(Float(Int(value >> 16) & 0x000000FF)/255.0)
-    let green = CGFloat(Float(Int(value >> 8) & 0x000000FF)/255.0)
-    let blue = CGFloat(Float(Int(value) & 0x000000FF)/255.0)
+/// Color formatter
+public class ColorFormatter {
+    /**
+     Formats a hex color to UIColor
+     
+     - parameter hex: web format hex color without the #
+     
+     - returns: UIColor
+     */
+    public func format(hex: String) -> UIColor{
+        let scanner = NSScanner(string: hex)
+        scanner.charactersToBeSkipped = NSCharacterSet.alphanumericCharacterSet().invertedSet
+        
+        var value: UInt32 = 0;
+        scanner.scanHexInt(&value)
+        
+        let red = CGFloat(Float(Int(value >> 16) & 0x000000FF)/255.0)
+        let green = CGFloat(Float(Int(value >> 8) & 0x000000FF)/255.0)
+        let blue = CGFloat(Float(Int(value) & 0x000000FF)/255.0)
 
-    let color = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
-    return color
+        let color = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        return color
+    }
+    
 }

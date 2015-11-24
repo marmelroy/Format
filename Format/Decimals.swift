@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ *  Decimals formatting enum
+ */
 public enum Decimals: NumberFormatter {
     case None
     case One
@@ -19,6 +22,7 @@ public enum Decimals: NumberFormatter {
     case Seven
     case Eight
 
+    /// Modifier
     public var modifier: String {
         switch self {
         case None:
@@ -42,6 +46,7 @@ public enum Decimals: NumberFormatter {
         }
     }
     
+    /// Type enum
     public var type: NumberFormatterType {
         return NumberFormatterType.Decimal
     }

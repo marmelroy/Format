@@ -9,18 +9,28 @@
 import Foundation
 import MapKit
 
+/**
+ Number formatter types
+ 
+ - Currency: Currency formatter.
+ - Decimal:  Number of decimal places formatter.
+ - General: Type containing ordinal, spell out and distance formatters (meters to local).
+ */
 public enum NumberFormatterType {
     case Currency
     case Decimal
-    case Distance
     case General
 }
 
+/**
+ *  Number formatter protocol. Consists of a string modifier and a type enum.
+ */
 public protocol NumberFormatter {
     var modifier: String { get }
     var type: NumberFormatterType { get }
 }
 
+/// Number format class
 public class NumberFormat {
     
     static let sharedInstance = NumberFormat()
@@ -29,6 +39,14 @@ public class NumberFormat {
     
     let distanceFormatter = MKDistanceFormatter()
 
+    /**
+     Number formatting function
+     
+     - parameter number:    number to format as an NSNumber.
+     - parameter formatter: the formatter to be applied, conforms to NumberFormatter protocol.
+     
+     - returns: formatted string.
+     */
     public func format(number: NSNumber, formatter: NumberFormatter) -> String{
         var formattedString: String = ""
         if (formatter.type == .Decimal){
@@ -42,15 +60,16 @@ public class NumberFormat {
         if (formatter.type == .General){
             if formatter.modifier == NumberFormatterOrdinalKey {
                 nsFormatter.numberStyle = NSNumberFormatterStyle.OrdinalStyle
+                formattedString = nsFormatter.stringFromNumber(number)!
             }
             else if formatter.modifier == NumberFormatterSpellOutKey {
                 nsFormatter.numberStyle = NSNumberFormatterStyle.SpellOutStyle
+                formattedString = nsFormatter.stringFromNumber(number)!
             }
-            formattedString = nsFormatter.stringFromNumber(number)!
-        }
-        if (formatter.type == .Distance){
-            let distance = number as CLLocationDistance
-            formattedString = distanceFormatter.stringFromDistance(distance)
+            else if formatter.modifier == NumberFormatterDistanceKey {
+                let distance = number as CLLocationDistance
+                formattedString = distanceFormatter.stringFromDistance(distance)
+            }
         }
         return formattedString
     }
