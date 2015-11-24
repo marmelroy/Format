@@ -10,3 +10,4 @@ import Foundation
 
 let NumberFormatterOrdinalKey = "ordinal"
 let NumberFormatterSpellOutKey = "spellout"
+let NumberFormatterDistanceKey = "distance"

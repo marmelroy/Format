@@ -11,6 +11,7 @@ import Foundation
 public enum General: NumberFormatter {
     case Ordinal
     case SpellOut
+    case Distance
 
     public var modifier: String {
         switch self {
@@ -18,9 +19,11 @@ public enum General: NumberFormatter {
             return NumberFormatterOrdinalKey
         case SpellOut:
             return NumberFormatterSpellOutKey
+        case Distance:
+            return NumberFormatterSpellOutKey
         }
     }
-    
+
     public var type: NumberFormatterType {
         return NumberFormatterType.General
     }

@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import MapKit
 
 public enum NumberFormatterType {
     case Currency
     case Decimal
+    case Distance
     case General
 }
 
@@ -19,25 +21,38 @@ public protocol NumberFormatter {
     var type: NumberFormatterType { get }
 }
 
-public func formatNumber(number: NSNumber, formatter: NumberFormatter) -> String{
-    var formattedString: String = ""
-    let numberFormatter = NSNumberFormatter()
-    if (formatter.type == .Decimal){
-        formattedString = NSString(format: "%\(formatter.modifier)f", CGFloat(number)) as String
-    }
-    if (formatter.type == .Currency){
-        numberFormatter.currencyCode = formatter.modifier
-        numberFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
-        formattedString = numberFormatter.stringFromNumber(number)!
-    }
-    if (formatter.type == .General){
-        if formatter.modifier == NumberFormatterOrdinalKey {
-            numberFormatter.numberStyle = NSNumberFormatterStyle.OrdinalStyle
+public class NumberFormat {
+    
+    static let sharedInstance = NumberFormat()
+    
+    let nsFormatter = NSNumberFormatter()
+    
+    let distanceFormatter = MKDistanceFormatter()
+
+    public func format(number: NSNumber, formatter: NumberFormatter) -> String{
+        var formattedString: String = ""
+        if (formatter.type == .Decimal){
+            formattedString = NSString(format: "%\(formatter.modifier)f", CGFloat(number)) as String
         }
-        else if formatter.modifier == NumberFormatterSpellOutKey {
-            numberFormatter.numberStyle = NSNumberFormatterStyle.SpellOutStyle
+        if (formatter.type == .Currency){
+            nsFormatter.currencyCode = formatter.modifier
+            nsFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+            formattedString = nsFormatter.stringFromNumber(number)!
         }
-        formattedString = numberFormatter.stringFromNumber(number)!
+        if (formatter.type == .General){
+            if formatter.modifier == NumberFormatterOrdinalKey {
+                nsFormatter.numberStyle = NSNumberFormatterStyle.OrdinalStyle
+            }
+            else if formatter.modifier == NumberFormatterSpellOutKey {
+                nsFormatter.numberStyle = NSNumberFormatterStyle.SpellOutStyle
+            }
+            formattedString = nsFormatter.stringFromNumber(number)!
+        }
+        if (formatter.type == .Distance){
+            let distance = number as CLLocationDistance
+            formattedString = distanceFormatter.stringFromDistance(distance)
+        }
+        return formattedString
     }
-    return formattedString
 }
+
