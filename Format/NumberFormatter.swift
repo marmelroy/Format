@@ -50,35 +50,38 @@ public class NumberFormat {
     public func format(number: NSNumber, formatter: NumberFormatter, locale: NSLocale) -> String{
         nsFormatter.locale = locale
         distanceFormatter.locale = locale
-        var formattedString: String = ""
+        var formattedString: String?
         if (formatter.type == .Decimal){
             nsFormatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
             if let modifierAsInt = Int(formatter.modifier) {
                 nsFormatter.maximumFractionDigits = modifierAsInt
                 nsFormatter.minimumFractionDigits = modifierAsInt
             }
-            formattedString = nsFormatter.stringFromNumber(number)!
+            formattedString = nsFormatter.stringFromNumber(number)
         }
         if (formatter.type == .Currency){
             nsFormatter.currencyCode = formatter.modifier
             nsFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
-            formattedString = nsFormatter.stringFromNumber(number)!
+            formattedString = nsFormatter.stringFromNumber(number)
         }
         if (formatter.type == .General){
             if formatter.modifier == NumberFormatterOrdinalKey {
                 nsFormatter.numberStyle = NSNumberFormatterStyle.OrdinalStyle
-                formattedString = nsFormatter.stringFromNumber(number)!
+                formattedString = nsFormatter.stringFromNumber(number)
             }
             else if formatter.modifier == NumberFormatterSpellOutKey {
                 nsFormatter.numberStyle = NSNumberFormatterStyle.SpellOutStyle
-                formattedString = nsFormatter.stringFromNumber(number)!
+                formattedString = nsFormatter.stringFromNumber(number)
             }
             else if formatter.modifier == NumberFormatterDistanceKey {
                 let distance = number as CLLocationDistance
                 formattedString = distanceFormatter.stringFromDistance(distance)
             }
         }
-        return formattedString
+        guard let finalString = formattedString else {
+            return ""
+        }
+        return finalString
     }
 }
 

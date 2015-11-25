@@ -19,14 +19,16 @@ public extension CLPlacemark {
     @available(iOS, deprecated=9.0)
     public func format() -> String {
         // Uses deprecated Address book keys since there's no interoperability between CLPlacemark and ContactsKit yet.
-        let addressDict = self.addressDictionary!
+        guard let addressDictionary = self.addressDictionary else {
+            return ""
+        }
         var formattedString: String = ""
-        let street = addressDict[kABPersonAddressStreetKey] as? String
-        let city = addressDict[kABPersonAddressCityKey] as? String
-        let state = addressDict[kABPersonAddressStateKey] as? String
-        let postalCode = addressDict[kABPersonAddressZIPKey] as? String
-        let country = addressDict[kABPersonAddressCountryKey] as? String
-        let ISOCountryCode = addressDict[kABPersonAddressCountryCodeKey] as? String
+        let street = addressDictionary[kABPersonAddressStreetKey] as? String
+        let city = addressDictionary[kABPersonAddressCityKey] as? String
+        let state = addressDictionary[kABPersonAddressStateKey] as? String
+        let postalCode = addressDictionary[kABPersonAddressZIPKey] as? String
+        let country = addressDictionary[kABPersonAddressCountryKey] as? String
+        let ISOCountryCode = addressDictionary[kABPersonAddressCountryCodeKey] as? String
         
         formattedString = AddressFormatter().format(street, city: city, state: state, postalCode: postalCode, country: country, ISOCountryCode: ISOCountryCode)
         return formattedString
