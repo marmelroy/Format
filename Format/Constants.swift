@@ -8,6 +8,9 @@
 
 import Foundation
 
+/// General ordinal key
 let NumberFormatterOrdinalKey = "ordinal"
+/// General spell out key
 let NumberFormatterSpellOutKey = "spellout"
+/// General distance key
 let NumberFormatterDistanceKey = "distance"

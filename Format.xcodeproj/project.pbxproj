@@ -23,6 +23,7 @@
 		345E9B7D1BF892F900A88BD7 /* AddressExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E9B7C1BF892F900A88BD7 /* AddressExtensions.swift */; };
 		345E9B801BF8931B00A88BD7 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345E9B7F1BF8931B00A88BD7 /* Contacts.framework */; };
 		345E9B821BF8932000A88BD7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345E9B811BF8932000A88BD7 /* CoreLocation.framework */; };
+		34C74C121C0533E400B4342B /* ColorFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C74C111C0533E400B4342B /* ColorFormatterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		345E9B7C1BF892F900A88BD7 /* AddressExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressExtensions.swift; sourceTree = "<group>"; };
 		345E9B7F1BF8931B00A88BD7 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 		345E9B811BF8932000A88BD7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		34C74C111C0533E400B4342B /* ColorFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorFormatterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				340F3D1C1BF5E17F000C2EA8 /* FormatTests.swift */,
+				34C74C111C0533E400B4342B /* ColorFormatterTests.swift */,
 				340F3D1E1BF5E17F000C2EA8 /* Info.plist */,
 			);
 			path = FormatTests;
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C74C121C0533E400B4342B /* ColorFormatterTests.swift in Sources */,
 				340F3D1D1BF5E17F000C2EA8 /* FormatTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
