@@ -47,7 +47,9 @@ public class NumberFormat {
      
      - returns: formatted string.
      */
-    public func format(number: NSNumber, formatter: NumberFormatter) -> String{
+    public func format(number: NSNumber, formatter: NumberFormatter, locale: NSLocale) -> String{
+        nsFormatter.locale = locale
+        distanceFormatter.locale = locale
         var formattedString: String = ""
         if (formatter.type == .Decimal){
             formattedString = NSString(format: "%\(formatter.modifier)f", CGFloat(number)) as String
