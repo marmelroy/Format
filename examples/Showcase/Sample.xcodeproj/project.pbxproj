@@ -13,8 +13,6 @@
 		34346D081B7294470063FED4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34346D061B7294470063FED4 /* Main.storyboard */; };
 		34346D0A1B7294470063FED4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34346D091B7294470063FED4 /* Images.xcassets */; };
 		34346D0D1B7294470063FED4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34346D0B1B7294470063FED4 /* LaunchScreen.xib */; };
-		3477BAA01C06560D00050501 /* Format.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3477BA9D1C06560500050501 /* Format.framework */; };
-		3477BAA11C06560D00050501 /* Format.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3477BA9D1C06560500050501 /* Format.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3477BAA61C06631100050501 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3477BAA51C06631100050501 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,27 +24,6 @@
 			remoteGlobalIDString = 34346CFC1B7294470063FED4;
 			remoteInfo = Sample;
 		};
-		3477BA9C1C06560500050501 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3477BA971C06560500050501 /* Format.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 340F3D0D1BF5E17F000C2EA8;
-			remoteInfo = Format;
-		};
-		3477BA9E1C06560500050501 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3477BA971C06560500050501 /* Format.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 340F3D171BF5E17F000C2EA8;
-			remoteInfo = FormatTests;
-		};
-		3477BAA21C06560E00050501 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3477BA971C06560500050501 /* Format.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 340F3D0C1BF5E17F000C2EA8;
-			remoteInfo = Format;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,7 +33,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3477BAA11C06560D00050501 /* Format.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,7 +50,6 @@
 		34346D091B7294470063FED4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		34346D261B72976A0063FED4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34346D271B72976A0063FED4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		3477BA971C06560500050501 /* Format.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Format.xcodeproj; path = ../../Format.xcodeproj; sourceTree = "<group>"; };
 		3477BAA51C06631100050501 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -91,7 +66,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3477BAA61C06631100050501 /* CoreLocation.framework in Frameworks */,
-				3477BAA01C06560D00050501 /* Format.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +84,6 @@
 		34346CF41B7294470063FED4 = {
 			isa = PBXGroup;
 			children = (
-				3477BA971C06560500050501 /* Format.xcodeproj */,
 				34346CFF1B7294470063FED4 /* Sample */,
 				3426FF911BB6AEE200E8E1BB /* SampleTests */,
 				34346CFE1B7294470063FED4 /* Products */,
@@ -148,15 +121,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3477BA981C06560500050501 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3477BA9D1C06560500050501 /* Format.framework */,
-				3477BA9F1C06560500050501 /* FormatTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,7 +154,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				3477BAA31C06560E00050501 /* PBXTargetDependency */,
 			);
 			name = Sample;
 			productName = Sample;
@@ -234,12 +197,6 @@
 			mainGroup = 34346CF41B7294470063FED4;
 			productRefGroup = 34346CFE1B7294470063FED4 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 3477BA981C06560500050501 /* Products */;
-					ProjectRef = 3477BA971C06560500050501 /* Format.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				34346CFC1B7294470063FED4 /* Sample */,
@@ -247,23 +204,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		3477BA9D1C06560500050501 /* Format.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Format.framework;
-			remoteRef = 3477BA9C1C06560500050501 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3477BA9F1C06560500050501 /* FormatTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = FormatTests.xctest;
-			remoteRef = 3477BA9E1C06560500050501 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3426FF8E1BB6AEE200E8E1BB /* Resources */ = {
@@ -310,11 +250,6 @@
 			isa = PBXTargetDependency;
 			target = 34346CFC1B7294470063FED4 /* Sample */;
 			targetProxy = 3426FF951BB6AEE200E8E1BB /* PBXContainerItemProxy */;
-		};
-		3477BAA31C06560E00050501 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Format;
-			targetProxy = 3477BAA21C06560E00050501 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
