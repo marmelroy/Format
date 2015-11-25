@@ -1,8 +1,10 @@
+![Format - a Swift Formatter Kit](https://cloud.githubusercontent.com/assets/889949/11390954/ee7607b6-934e-11e5-9754-b1cdb12f27d9.png)
+
 [![Build Status](https://travis-ci.org/marmelroy/Format.svg?branch=master)](https://travis-ci.org/marmelroy/Format) [![Version](http://img.shields.io/cocoapods/v/Format.svg)](http://cocoapods.org/?q=Format)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 # Format
-Swift formatter kit. Simple formatting syntax for decimal numbers, currency, addresses, ordinal numbers and hexadecimal colors.
+A Swift 2.0 formatter kit. Simple formatting syntax for decimal numbers, currency, addresses, ordinal numbers and hexadecimal colors.
 
 ## Usage
 
