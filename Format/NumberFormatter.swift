@@ -69,7 +69,8 @@ public class NumberFormat {
         }
         if (formatter.type == .General){
             if formatter.modifier == NumberFormatterOrdinalKey {
-                formattedString = nsFormatter.stringFromNumber(number)
+                let roundedDownNumber = Int(number)
+                formattedString = nsFormatter.stringFromNumber(roundedDownNumber)
             }
             else if formatter.modifier == NumberFormatterSpellOutKey {
                 formattedString = nsFormatter.stringFromNumber(number)
