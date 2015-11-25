@@ -29,7 +29,7 @@ let formattedFRNumber = 99.format(Currency.EUR, locale: frLocale) // 99,00 €
 let formattedGBNumber = 99.format(Currency.GBP, locale: gbLocale) // £ 99.00
 ```
 
-Apply any of these formatters on any number type:
+Apply any of these formatters to any number type:
 ```swift
 Decimals.Three // 10.123
 Currency.USD // $10.12
