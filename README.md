@@ -6,6 +6,8 @@
 # Format
 A Swift 2.0 formatter kit. Simple formatting syntax for decimal numbers, currency, addresses, ordinal numbers and hexadecimal colors.
 
+![Format - a Swift Formatter Kit](http://i.giphy.com/xTk9ZGhCRxuctoWjDO.gif)
+
 ## Usage
 
 Import Format at the top of the Swift file with the content you would like to format.
