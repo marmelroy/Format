@@ -29,7 +29,7 @@ let formattedFRNumber = 99.format(Currency.EUR, locale: frLocale) // 99,00 €
 let formattedGBNumber = 99.format(Currency.GBP, locale: gbLocale) // £ 99.00
 ```
 
-Apply any of these formatters on any number type:
+Apply any of these formatters to any number type:
 ```swift
 Decimals.Three // 10.123
 Currency.USD // $10.12
@@ -42,7 +42,7 @@ The distance formatter assumes the number represents the distance in meters befo
 
 ## Address Formatting
 
-Different cultures have [different ways of displaying addresses](https://en.wikipedia.org/wiki/Address_(geography)#Address_format). Format includes an extension on CLPlacemark that converts the addressDictionary to a formatted string in the current locale.
+Different cultures have [different ways of displaying addresses](https://en.wikipedia.org/wiki/Address_(geography)#Address_format). Format includes an extension on CLPlacemark that converts the addressDictionary to a formatted string in the current locale:
 
 ```swift
 let address = placemark.format()
@@ -57,7 +57,7 @@ let address = AddressFormatter().format(street, city: city, state: state, postal
 
 ## Color Formatting
 
-Format can help you convert hexadecimal colors from the web to UIColors you can work with.
+Format can help you convert hexadecimal colors from the web to UIColors you can work with:
 
 ```swift
 let color = ColorFormatter().format("2ba134")
