@@ -8,6 +8,7 @@
 
 import UIKit
 import Format
+import CoreLocation
 
 class ViewController: UIViewController {
     
@@ -52,6 +53,24 @@ class ViewController: UIViewController {
     
     @IBAction func doApplyGeneralSpellOut(sender: AnyObject) {
         resultLabel.text = randomNumber.format(General.SpellOut)
+    }
+    
+    @IBAction func doApplyAddress(sender: AnyObject) {
+        let location = CLLocation(latitude: 38.897609, longitude: -77.036735)
+        
+        CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error) -> Void in
+            guard let placemarks = placemarks else {
+                return
+            }
+            if placemarks.count > 0 {
+                let pm = placemarks[0]
+                self.resultLabel.text = pm.format()
+            }
+        })
+    }
+    
+    @IBAction func doApplyColor(sender: AnyObject) {
+        view.backgroundColor = ColorFormatter().format("24e7a9")
     }
     
     @IBAction func doApplyGeneralDistance(sender: AnyObject) {
