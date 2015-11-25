@@ -1,4 +1,4 @@
-![Format - a Swift Formatter Kit](https://cloud.githubusercontent.com/assets/889949/11390954/ee7607b6-934e-11e5-9754-b1cdb12f27d9.png)
+![Format - a Swift Formatter Kit](https://cloud.githubusercontent.com/assets/889949/11391160/9bb568f8-9350-11e5-8408-91308b2f735d.png)
 
 [![Build Status](https://travis-ci.org/marmelroy/Format.svg?branch=master)](https://travis-ci.org/marmelroy/Format) [![Version](http://img.shields.io/cocoapods/v/Format.svg)](http://cocoapods.org/?q=Format)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
