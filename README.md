@@ -65,8 +65,6 @@ let color = ColorFormatter().format("2ba134")
 
 In case of an error, the color will default to black if the string is empty or white if the string is invalid.
 
-<img src="http://i.giphy.com/xTk9ZGhCRxuctoWjDO.gif" width="250">
-
 ### Setting up with Carthage
 
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that automates the process of adding frameworks to your Cocoa application.
