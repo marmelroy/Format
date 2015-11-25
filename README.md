@@ -6,8 +6,6 @@
 # Format
 A Swift 2.0 formatter kit. Simple formatting syntax for decimal numbers, currency, addresses, ordinal numbers and hexadecimal colors.
 
-<img src="http://i.giphy.com/xTk9ZGhCRxuctoWjDO.gif" width="250">
-
 ## Usage
 
 Import Format at the top of the Swift file with the content you would like to format.
@@ -66,6 +64,8 @@ let color = ColorFormatter().format("2ba134")
 ```
 
 In case of an error, the color will default to black if the string is empty or white if the string is invalid.
+
+<img src="http://i.giphy.com/xTk9ZGhCRxuctoWjDO.gif" width="250">
 
 ### Setting up with Carthage
 
