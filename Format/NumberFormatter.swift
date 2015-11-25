@@ -52,7 +52,12 @@ public class NumberFormat {
         distanceFormatter.locale = locale
         var formattedString: String = ""
         if (formatter.type == .Decimal){
-            formattedString = NSString(format: "%\(formatter.modifier)f", CGFloat(number)) as String
+            nsFormatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
+            if let modifierAsInt = Int(formatter.modifier) {
+                nsFormatter.maximumFractionDigits = modifierAsInt
+                nsFormatter.minimumFractionDigits = modifierAsInt
+            }
+            formattedString = nsFormatter.stringFromNumber(number)!
         }
         if (formatter.type == .Currency){
             nsFormatter.currencyCode = formatter.modifier

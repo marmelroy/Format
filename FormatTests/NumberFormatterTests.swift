@@ -47,14 +47,22 @@ class NumberFormatterTests: XCTestCase {
         XCTAssertEqual(formattedNumber, "3.1416")
     }
     
+    func testDecimalFormattingEuropean() {
+        let number = M_PI
+        let frenchLocale = NSLocale(localeIdentifier: "FR")
+        let formattedNumber = number.format(Decimals.Two, locale: frenchLocale)
+        XCTAssertEqual(formattedNumber, "3,14")
+    }
+    
     /**
     Currency
     */
 
     func testCurrencyFormattingDouble() {
         let number = 45.232313
-        let formattedNumberEUR = number.format(Currency.EUR)
-        XCTAssertEqual(formattedNumberEUR, "€45.23")
+        let frenchLocale = NSLocale(localeIdentifier: "FR")
+        let formattedNumberEUR = number.format(Currency.EUR, locale: frenchLocale)
+        XCTAssertEqual(formattedNumberEUR, "45,23 €")
         let formattedNumberGBP = number.format(Currency.GBP)
         XCTAssertEqual(formattedNumberGBP, "£45.23")
         let formattedNumberUSD = number.format(Currency.USD)
@@ -108,8 +116,9 @@ class NumberFormatterTests: XCTestCase {
         XCTAssertEqual(formattedNumberTwo, "two")
         let formattedNumberThree = 3.format(General.SpellOut)
         XCTAssertEqual(formattedNumberThree, "three")
-        let formattedNumberTwoHundred = 200.format(General.SpellOut)
-        XCTAssertEqual(formattedNumberTwoHundred, "two hundred")
+        let frenchLocale = NSLocale(localeIdentifier: "FR")
+        let formattedNumberTwoHundred = 200.format(General.SpellOut, locale: frenchLocale)
+        XCTAssertEqual(formattedNumberTwoHundred, "deux cents")
         let formattedNumberThreeThousand = 3214.format(General.SpellOut)
         XCTAssertEqual(formattedNumberThreeThousand, "three thousand two hundred fourteen")
     }
@@ -139,6 +148,13 @@ class NumberFormatterTests: XCTestCase {
         let number = -212145.232313 // meters
         let formattedNumber = number.format(General.Distance)
         XCTAssertEqual(formattedNumber, "-696,015 feet")
+    }
+    
+    func testDistanceEUR() {
+        let frenchLocale = NSLocale(localeIdentifier: "FR")
+        let number = 500 // meters
+        let formattedNumber = number.format(General.Distance, locale: frenchLocale)
+        XCTAssertEqual(formattedNumber, "500 m")
     }
 
 
