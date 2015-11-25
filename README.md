@@ -20,7 +20,7 @@ let number = 45
 let formattedNumber = number.format(Decimals.Two) // 45.00
 ```
 
-Examples of available number formatters:
+Examples of the number formatters:
 ```swift
 Decimals.Three // 10.123
 Currency.USD // $10.12
