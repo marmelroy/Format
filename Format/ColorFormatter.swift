@@ -11,6 +11,13 @@ import Foundation
 /// Color formatter
 public class ColorFormatter {
     /**
+     Init
+     
+     - returns: initialises the formatter
+     */
+    public init() {}
+    
+    /**
      Formats a hex color string to UIColor. If empty, Black. If invlaid, White.
      
      - parameter hex: web format hex color without the #

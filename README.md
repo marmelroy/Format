@@ -30,7 +30,7 @@ General.SpellOut // ten point one two three
 General.Distance // 30 feet
 ```
 
-Please note that the distance formatter assumes the number represents the distance in meters before converting and formatting it to the current locale's preferred unit.
+The distance formatter assumes the number represents the distance in meters before converting and formatting it to the current locale's preferred unit.
 
 ## Address Formatting
 
@@ -39,6 +39,7 @@ Different cultures have [different ways of displaying addresses](https://en.wiki
 ```swift
 let address = placemark.format()
 ```
+Please note that this function will produce a deprecated warning when used. This is because Apple is using AddressBook keys in the CLPlacemark and AddressBook was deprecated.
 
 To format a custom address (all fields are optional strings):
 

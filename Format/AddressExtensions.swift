@@ -18,7 +18,7 @@ public extension CLPlacemark {
      */
     @available(iOS, deprecated=9.0)
     public func format() -> String {
-        // Uses deprectaed Address book keys since there's no interoperability between CLPlacemark and ContactsKit yet.
+        // Uses deprecated Address book keys since there's no interoperability between CLPlacemark and ContactsKit yet.
         let addressDict = self.addressDictionary!
         var formattedString: String = ""
         let street = addressDict[kABPersonAddressStreetKey] as? String

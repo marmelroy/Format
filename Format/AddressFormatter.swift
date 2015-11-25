@@ -15,6 +15,13 @@ public class AddressFormatter {
     let postalFormatter = CNPostalAddressFormatter()
 
     /**
+     Init
+     
+     - returns: initialises the formatter
+     */
+    public init() {}
+
+    /**
      Format address.
      
      - parameter street:         the street as a string
