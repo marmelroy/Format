@@ -16,11 +16,10 @@ import Format
 
 Format provides extensions for all number types. To format an Int to two decimal places:
 ```swift
-let number = 45
-let formattedNumber = number.format(Decimals.Two) // 45.00
+let formattedNumber = 45.format(Decimals.Two) // 45.00
 ```
 
-Examples of the number formatters:
+You can use any of these formatters:
 ```swift
 Decimals.Three // 10.123
 Currency.USD // $10.12
@@ -30,6 +29,28 @@ General.Distance // 30 feet
 ```
 
 Please note that the distance formatter assumes the number represents the distance in meters before formatting it to the current locale's preferred unit.
+
+## Address Formatting
+
+Different cultures have different ways of displaying addresses. Format includes an extension on CLPlacemark that converts the addressDictionary to a formatted string in the current locale.
+
+```swift
+let address = placemark.format()
+```
+
+To format a custom address (all fields are optional strings):
+
+```swift
+let address = AddressFormatter().format(street, city: city, state: state, postalCode: postalCode, country: country, ISOCountryCode: ISOCountryCode)
+```
+
+## Color formatting
+
+Format can help you convert hexadecimal colors from the web to UIColors you can work with.
+
+```swift
+let color = ColorFormatter().format("2ba134")
+```
 
 ### Setting up with Carthage
 
