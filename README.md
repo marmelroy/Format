@@ -21,6 +21,14 @@ Format provides a formatting extension for all number types. To format an Int to
 let formattedNumber = 45.format(Decimals.Two) // 45.00
 ```
 
+Format automatically defaults to the user's current locale but you can provide a custom locale if you want to.
+```swift
+let frLocale = NSLocale(localeIdentifier: "FR")
+let gbLocale = NSLocale(localeIdentifier: "GB")
+let formattedFRNumber = 99.format(Currency.EUR, locale: frLocale) // 99,00 €
+let formattedGBNumber = 99.format(Currency.GBP, locale: gbLocale) // £ 99.00
+```
+
 You can apply any of these formatters on any number type:
 ```swift
 Decimals.Three // 10.123
