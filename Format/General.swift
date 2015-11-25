@@ -32,4 +32,16 @@ public enum General: NumberFormatter {
     public var type: NumberFormatterType {
         return NumberFormatterType.General
     }
+    
+    /// NSNumberFormatter style
+    public var style: NSNumberFormatterStyle? {
+        switch self {
+        case Ordinal:
+            return NSNumberFormatterStyle.OrdinalStyle
+        case SpellOut:
+            return NSNumberFormatterStyle.SpellOutStyle
+        case Distance:
+            return nil
+        }
+    }
 }

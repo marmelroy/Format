@@ -28,6 +28,7 @@ public enum NumberFormatterType {
 public protocol NumberFormatter {
     var modifier: String { get }
     var type: NumberFormatterType { get }
+    var style: NSNumberFormatterStyle? { get }
 }
 
 /// Number format class
@@ -35,12 +36,12 @@ public class NumberFormat {
     
     static let sharedInstance = NumberFormat()
     
-    let nsFormatter = NSNumberFormatter()
+    var nsFormatter = NSNumberFormatter()
     
     let distanceFormatter = MKDistanceFormatter()
 
     /**
-     Number formatting function
+     Number formatting function. Inits the NSFormatter again if style changes.
      
      - parameter number:    number to format as an NSNumber.
      - parameter formatter: the formatter to be applied, conforms to NumberFormatter protocol.
@@ -48,11 +49,14 @@ public class NumberFormat {
      - returns: formatted string.
      */
     public func format(number: NSNumber, formatter: NumberFormatter, locale: NSLocale) -> String{
+        if let style = formatter.style where nsFormatter.numberStyle != style {
+            nsFormatter = NSNumberFormatter()
+            nsFormatter.numberStyle = style
+        }
         nsFormatter.locale = locale
         distanceFormatter.locale = locale
         var formattedString: String?
         if (formatter.type == .Decimal){
-            nsFormatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
             if let modifierAsInt = Int(formatter.modifier) {
                 nsFormatter.maximumFractionDigits = modifierAsInt
                 nsFormatter.minimumFractionDigits = modifierAsInt
@@ -61,16 +65,13 @@ public class NumberFormat {
         }
         if (formatter.type == .Currency){
             nsFormatter.currencyCode = formatter.modifier
-            nsFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
             formattedString = nsFormatter.stringFromNumber(number)
         }
         if (formatter.type == .General){
             if formatter.modifier == NumberFormatterOrdinalKey {
-                nsFormatter.numberStyle = NSNumberFormatterStyle.OrdinalStyle
                 formattedString = nsFormatter.stringFromNumber(number)
             }
             else if formatter.modifier == NumberFormatterSpellOutKey {
-                nsFormatter.numberStyle = NSNumberFormatterStyle.SpellOutStyle
                 formattedString = nsFormatter.stringFromNumber(number)
             }
             else if formatter.modifier == NumberFormatterDistanceKey {

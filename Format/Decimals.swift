@@ -50,4 +50,10 @@ public enum Decimals: NumberFormatter {
     public var type: NumberFormatterType {
         return NumberFormatterType.Decimal
     }
+    
+    /// NSNumberFormatter style
+    public var style: NSNumberFormatterStyle? {
+        return NSNumberFormatterStyle.DecimalStyle
+    }
+    
 }

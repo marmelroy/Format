@@ -917,4 +917,10 @@ public enum Currency: NumberFormatter {
     public var type: NumberFormatterType {
         return NumberFormatterType.Currency
     }
+    
+    /// NSNumberFormatter style
+    public var style: NSNumberFormatterStyle? {
+        return NSNumberFormatterStyle.CurrencyStyle
+    }
+
 }
