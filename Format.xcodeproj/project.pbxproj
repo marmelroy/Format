@@ -10,7 +10,6 @@
 		340E40E71BFB3C200054B560 /* ColorFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340E40E61BFB3C200054B560 /* ColorFormatter.swift */; };
 		340F3D111BF5E17F000C2EA8 /* Format.h in Headers */ = {isa = PBXBuildFile; fileRef = 340F3D101BF5E17F000C2EA8 /* Format.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		340F3D181BF5E17F000C2EA8 /* Format.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 340F3D0D1BF5E17F000C2EA8 /* Format.framework */; };
-		340F3D1D1BF5E17F000C2EA8 /* FormatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340F3D1C1BF5E17F000C2EA8 /* FormatTests.swift */; };
 		340F3D2B1BF5E1DE000C2EA8 /* NumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340F3D2A1BF5E1DE000C2EA8 /* NumberExtensions.swift */; };
 		340F3D2D1BF5E1F1000C2EA8 /* Decimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340F3D2C1BF5E1F1000C2EA8 /* Decimals.swift */; };
 		340F3D2F1BF5E213000C2EA8 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340F3D2E1BF5E213000C2EA8 /* NumberFormatter.swift */; };
@@ -24,6 +23,7 @@
 		345E9B801BF8931B00A88BD7 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345E9B7F1BF8931B00A88BD7 /* Contacts.framework */; };
 		345E9B821BF8932000A88BD7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345E9B811BF8932000A88BD7 /* CoreLocation.framework */; };
 		34C74C121C0533E400B4342B /* ColorFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C74C111C0533E400B4342B /* ColorFormatterTests.swift */; };
+		34C74C141C05392D00B4342B /* NumberFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C74C131C05392D00B4342B /* NumberFormatterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,6 @@
 		340F3D101BF5E17F000C2EA8 /* Format.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Format.h; sourceTree = "<group>"; };
 		340F3D121BF5E17F000C2EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		340F3D171BF5E17F000C2EA8 /* FormatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		340F3D1C1BF5E17F000C2EA8 /* FormatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatTests.swift; sourceTree = "<group>"; };
 		340F3D1E1BF5E17F000C2EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		340F3D2A1BF5E1DE000C2EA8 /* NumberExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberExtensions.swift; sourceTree = "<group>"; };
 		340F3D2C1BF5E1F1000C2EA8 /* Decimals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decimals.swift; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		345E9B7F1BF8931B00A88BD7 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 		345E9B811BF8932000A88BD7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		34C74C111C0533E400B4342B /* ColorFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorFormatterTests.swift; sourceTree = "<group>"; };
+		34C74C131C05392D00B4342B /* NumberFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFormatterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +125,7 @@
 		340F3D1B1BF5E17F000C2EA8 /* FormatTests */ = {
 			isa = PBXGroup;
 			children = (
-				340F3D1C1BF5E17F000C2EA8 /* FormatTests.swift */,
+				34C74C131C05392D00B4342B /* NumberFormatterTests.swift */,
 				34C74C111C0533E400B4342B /* ColorFormatterTests.swift */,
 				340F3D1E1BF5E17F000C2EA8 /* Info.plist */,
 			);
@@ -289,7 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34C74C121C0533E400B4342B /* ColorFormatterTests.swift in Sources */,
-				340F3D1D1BF5E17F000C2EA8 /* FormatTests.swift in Sources */,
+				34C74C141C05392D00B4342B /* NumberFormatterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

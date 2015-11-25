@@ -24,7 +24,7 @@ public enum General: NumberFormatter {
         case SpellOut:
             return NumberFormatterSpellOutKey
         case Distance:
-            return NumberFormatterSpellOutKey
+            return NumberFormatterDistanceKey
         }
     }
 
