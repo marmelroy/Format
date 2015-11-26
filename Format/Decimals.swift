@@ -12,15 +12,26 @@ import Foundation
  *  Decimals formatting enum
  */
 public enum Decimals: NumberFormatter {
+    /// No decimal numbers.
     case None
+    /// 1 decimal numbers.
     case One
+    /// 2 decimal numbers.
     case Two
+    /// 3 decimal numbers.
     case Three
+    /// 4 decimal numbers.
     case Four
+    /// 5 decimal numbers.
     case Five
+    /// 6 decimal numbers.
     case Six
+    /// 7 decimal numbers.
     case Seven
+    /// 8 decimal numbers.
     case Eight
+    /// 9 decimal numbers.
+    case Nine
 
     /// Modifier
     public var modifier: String {
@@ -43,6 +54,8 @@ public enum Decimals: NumberFormatter {
             return "7"
         case Eight:
             return "8"
+        case Nine:
+            return "9"
         }
     }
     
