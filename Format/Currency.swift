@@ -330,8 +330,6 @@ public enum Currency: NumberFormatter {
     case ZAR
     /// Zambia Kwacha
     case ZMW
-    /// Zimbabwe Dollar
-    case ZWD
     
     /// Modifier
     public var modifier: String {
@@ -654,8 +652,6 @@ public enum Currency: NumberFormatter {
             return "ZAR"
         case ZMW:
             return "ZMW"
-        case ZWD:
-            return "ZWD"
         }
     }
     
