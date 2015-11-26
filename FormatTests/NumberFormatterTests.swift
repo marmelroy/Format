@@ -105,6 +105,15 @@ class NumberFormatterTests: XCTestCase {
         XCTAssertEqual(formattedNumberTwoHundred, "200th")
     }
     
+    func testOrdinalRoundDown() {
+        let formattedNumberOne = 3.3.format(General.Ordinal)
+        XCTAssertEqual(formattedNumberOne, "3rd")
+        let formattedNumberThree = 3.999.format(General.Ordinal)
+        XCTAssertEqual(formattedNumberThree, "3rd")
+        let formattedNumberTwoHundred = 4.00.format(General.Ordinal)
+        XCTAssertEqual(formattedNumberTwoHundred, "4th")
+    }
+    
     /**
     Spell out
     */
