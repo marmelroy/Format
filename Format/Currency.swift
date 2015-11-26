@@ -12,304 +12,326 @@ import Foundation
  *  Currency formatter
  */
 public enum Currency: NumberFormatter {
+    /// Andorran Peseta
     case ADP
+    /// Arab Emirates Dirham
     case AED
-    case AFA
+    /// Afghanistan Afghani
     case AFN
-    case ALK
+    /// Albania Lek
     case ALL
+    /// Armenia Dram
     case AMD
+    /// Netherlands Antilles Guilder
     case ANG
+    /// Angola Kwanza
     case AOA
-    case AOK
-    case AON
-    case AOR
-    case ARA
-    case ARL
-    case ARM
-    case ARP
+    /// Argentine Peso
     case ARS
-    case ATS
+    /// Australia Dollar
     case AUD
+    /// Aruba Guilder
     case AWG
-    case AZM
+    /// Azerbaijan New Manat
     case AZN
+    /// Bosnia and Herzegovina dinar
     case BAD
+    /// Bosnian Mark
     case BAM
+    /// Bangladeshi Taka
     case BAN
+    /// Barbados Dollar
     case BBD
+    /// Bangladesh Taka
     case BDT
-    case BEC
-    case BEF
-    case BEL
-    case BGL
-    case BGM
+    /// Bulgarian Lev
     case BGN
-    case BGO
+    /// Bahrain Dinar
     case BHD
+    /// Burundi Franc
     case BIF
+    /// Bermuda Dollar
     case BMD
+    /// Brunei Darussalam Dollar
     case BND
+    /// Bolivia Boliviano
     case BOB
-    case BOL
-    case BOP
-    case BOV
-    case BRB
-    case BRC
-    case BRE
+    /// Brazil Real
     case BRL
-    case BRN
-    case BRR
-    case BRZ
+    /// Bahamas Dollar
     case BSD
+    /// Bhutan Ngultrum
     case BTN
-    case BUK
+    /// Botswana Pula
     case BWP
-    case BYB
+    /// Belarus Ruble
     case BYR
+    /// Belize Dollar
     case BZD
+    /// Canada Dollar
     case CAD
+    /// Congo/Kinshasa Franc
     case CDF
-    case CHE
+    /// Switzerland Franc
     case CHF
-    case CHW
-    case CLE
-    case CLF
+    /// Chile Peso
     case CLP
-    case CNX
+    /// China Yuan Renminbi
     case CNY
+    /// Colombia Peso
     case COP
-    case COU
+    /// Costa Rica Colon
     case CRC
-    case CSD
-    case CSK
+    /// Cuba Convertible Peso
     case CUC
+    /// Cuba Peso
     case CUP
+    /// Cape Verde Escudo
     case CVE
-    case CYP
+    /// Czech Republic Koruna
     case CZK
-    case DDM
-    case DEM
+    /// Djibouti Franc
     case DJF
+    /// Denmark Krone
     case DKK
+    /// Dominican Republic Peso
     case DOP
+    /// Algeria Dinar
     case DZD
-    case ECS
-    case ECV
-    case EEK
+    /// Egypt Pound
     case EGP
-    case EQE
+    /// Eritrea Nakfa
     case ERN
-    case ESA
-    case ESB
-    case ESP
+    /// Ethiopia Birr
     case ETB
+    /// Euro
     case EUR
-    case FIM
+    /// Fiji Dollar
     case FJD
+    /// Falkland Islands (Malvinas) Pound
     case FKP
-    case FRF
+    /// United Kingdom Pound
     case GBP
-    case GEK
+    /// Georgia Lari
     case GEL
-    case GHC
+    /// Ghana Cedi
     case GHS
+    /// Gibraltar Pound
     case GIP
+    /// Gambia Dalasi
     case GMD
+    /// Guinea Franc
     case GNF
-    case GNS
-    case GQE
-    case GRD
+    /// Guatemala Quetzal
     case GTQ
-    case GWE
-    case GWP
+    /// Guyana Dollar
     case GYD
+    /// Hong Kong Dollar
     case HKD
+    /// Honduras Lempira
     case HNL
-    case HRD
+    /// Croatia Kuna
     case HRK
+    /// Haiti Gourde
     case HTG
+    /// Hungary Forint
     case HUF
+    /// Indonesia Rupiah
     case IDR
-    case IEP
-    case ILP
-    case ILR
+    /// Israel Shekel
     case ILS
+    /// India Rupee
     case INR
+    /// Iraq Dinar
     case IQD
+    /// Iran Rial
     case IRR
-    case ISJ
+    /// Iceland Krona
     case ISK
-    case ITL
+    /// Jamaica Dollar
     case JMD
+    /// Jordan Dinar
     case JOD
+    /// Japan Yen
     case JPY
+    /// Kenya Shilling
     case KES
+    /// Kyrgyzstan Som
     case KGS
+    /// Cambodia Riel
     case KHR
+    /// Comoros Franc
     case KMF
+    /// Korea (North) Won
     case KPW
-    case KRH
-    case KRO
+    /// Korea (South) Won
     case KRW
+    /// Kuwait Dinar
     case KWD
+    /// Cayman Islands Dollar
     case KYD
+    /// Kazakhstan Tenge
     case KZT
+    /// Laos Kip
     case LAK
+    /// Lebanon Pound
     case LBP
+    /// Sri Lanka Rupee
     case LKR
+    /// Liberia Dollar
     case LRD
+    /// Lesotho Loti
     case LSL
-    case LSM
-    case LTL
-    case LTT
-    case LUC
-    case LUF
-    case LUL
-    case LVL
-    case LVR
+    /// Libya Dinar
     case LYD
+    /// Morocco Dirham
     case MAD
-    case MAF
-    case MCF
-    case MDC
+    /// Moldova Leu
     case MDL
+    /// Madagascar Ariary
     case MGA
-    case MGF
+    /// Macedonia Denar
     case MKD
-    case MKN
-    case MLF
+    /// Myanmar (Burma) Kyat
     case MMK
+    /// Mongolia Tughrik
     case MNT
+    /// Macau Pataca
     case MOP
+    /// Mauritania Ouguiya
     case MRO
-    case MTL
-    case MTP
+    /// Mauritius Rupee
     case MUR
-    case MVP
+    /// Maldives (Maldive Islands) Rufiyaa
     case MVR
+    /// Malawi Kwacha
     case MWK
+    /// Mexico Peso
     case MXN
-    case MXP
-    case MXV
+    /// Malaysia Ringgit
     case MYR
-    case MZE
-    case MZM
+    /// Mozambique Metical
     case MZN
+    /// Namibia Dollar
     case NAD
+    /// Nigeria Naira
     case NGN
-    case NIC
+    /// Nicaragua Cordoba
     case NIO
-    case NLG
+    /// Norway Krone
     case NOK
+    /// Nepal Rupee
     case NPR
+    /// New Zealand Dollar
     case NZD
+    /// Oman Rial
     case OMR
+    /// Panama Balboa
     case PAB
-    case PEI
+    /// Peru Nuevo Sol
     case PEN
-    case PES
+    /// Papua New Guinea Kina
     case PGK
+    /// Philippines Peso
     case PHP
+    /// Pakistan Rupee
     case PKR
+    /// Poland Zloty
     case PLN
-    case PLZ
-    case PTE
+    /// Paraguay Guarani
     case PYG
+    /// Qatar Riyal
     case QAR
-    case RHD
-    case ROL
+    /// Romania New Leu
     case RON
+    /// Serbia Dinar
     case RSD
+    /// Russia Ruble
     case RUB
-    case RUR
+    /// Rwanda Franc
     case RWF
+    /// Saudi Arabia Riyal
     case SAR
+    /// Solomon Islands Dollar
     case SBD
+    /// Seychelles Rupee
     case SCR
-    case SDD
+    /// Sudan Pound
     case SDG
-    case SDP
+    /// Sweden Krona
     case SEK
+    /// Singapore Dollar
     case SGD
+    /// Saint Helena Pound
     case SHP
-    case SIT
-    case SKK
+    /// Sierra Leone Leone
     case SLL
+    /// Somalia Shilling
     case SOS
+    /// Suriname Dollar
     case SRD
-    case SRG
-    case SSP
+    /// São Tomé and Príncipe Dobra
     case STD
-    case SUR
+    /// El Salvador Colon
     case SVC
+    /// Syria Pound
     case SYP
+    /// Swaziland Lilangeni
     case SZL
+    /// Thailand Baht
     case THB
-    case TJR
+    /// Tajikistan Somoni
     case TJS
-    case TMM
+    /// Turkmenistan Manat
     case TMT
+    /// Tunisia Dinar
     case TND
+    /// Tonga Pa'anga
     case TOP
-    case TPE
-    case TRL
+    /// Turkey Lira
     case TRY
+    /// Trinidad and Tobago Dollar
     case TTD
+    /// Taiwan New Dollar
     case TWD
+    /// Tanzania Shilling
     case TZS
+    /// Ukraine Hryvnia
     case UAH
-    case UAK
-    case UGS
+    /// Uganda Shilling
     case UGX
+    /// United States Dollar
     case USD
-    case USN
-    case USS
-    case UYI
-    case UYP
+    /// Uruguay Peso
     case UYU
+    /// Uzbekistan Som
     case UZS
-    case VEB
+    /// Venezuela Bolivar
     case VEF
+    /// Viet Nam Dong
     case VND
-    case VNN
+    /// Vanuatu Vatu
     case VUV
+    /// Samoa Tala
     case WST
+    /// Communauté Financière Africaine (BEAC) CFA Franc BEAC
     case XAF
-    case XAG
-    case XAU
-    case XBA
-    case XBB
-    case XBC
-    case XBD
+    /// East Caribbean Dollar
     case XCD
+    /// International Monetary Fund (IMF) Special Drawing Rights
     case XDR
-    case XEU
-    case XFO
-    case XFU
+    /// Communauté Financière Africaine (BCEAO) Franc
     case XOF
-    case XPD
+    /// Comptoirs Français du Pacifique (CFP) Franc
     case XPF
-    case XPT
-    case XRE
-    case XSU
-    case XTS
-    case XUA
-    case XXX
-    case YDD
+    /// Yemen Rial
     case YER
-    case YUD
-    case YUM
-    case YUN
-    case YUR
-    case ZAL
+    /// South Africa Rand
     case ZAR
-    case ZMK
+    /// Zambia Kwacha
     case ZMW
-    case ZRN
-    case ZRZ
-    case ZWL
-    case ZWR
+    /// Zimbabwe Dollar
+    case ZWD
     
     /// Modifier
     public var modifier: String {
@@ -318,12 +340,8 @@ public enum Currency: NumberFormatter {
             return "ADP"
         case AED:
             return "AED"
-        case AFA:
-            return "AFA"
         case AFN:
             return "AFN"
-        case ALK:
-            return "ALK"
         case ALL:
             return "ALL"
         case AMD:
@@ -332,30 +350,12 @@ public enum Currency: NumberFormatter {
             return "ANG"
         case AOA:
             return "AOA"
-        case AOK:
-            return "AOK"
-        case AON:
-            return "AON"
-        case AOR:
-            return "AOR"
-        case ARA:
-            return "ARA"
-        case ARL:
-            return "ARL"
-        case ARM:
-            return "ARM"
-        case ARP:
-            return "ARP"
         case ARS:
             return "ARS"
-        case ATS:
-            return "ATS"
         case AUD:
             return "AUD"
         case AWG:
             return "AWG"
-        case AZM:
-            return "AZM"
         case AZN:
             return "AZN"
         case BAD:
@@ -368,20 +368,8 @@ public enum Currency: NumberFormatter {
             return "BBD"
         case BDT:
             return "BDT"
-        case BEC:
-            return "BEC"
-        case BEF:
-            return "BEF"
-        case BEL:
-            return "BEL"
-        case BGL:
-            return "BGL"
-        case BGM:
-            return "BGM"
         case BGN:
             return "BGN"
-        case BGO:
-            return "BGO"
         case BHD:
             return "BHD"
         case BIF:
@@ -392,36 +380,14 @@ public enum Currency: NumberFormatter {
             return "BND"
         case BOB:
             return "BOB"
-        case BOL:
-            return "BOL"
-        case BOP:
-            return "BOP"
-        case BOV:
-            return "BOV"
-        case BRB:
-            return "BRB"
-        case BRC:
-            return "BRC"
-        case BRE:
-            return "BRE"
         case BRL:
             return "BRL"
-        case BRN:
-            return "BRN"
-        case BRR:
-            return "BRR"
-        case BRZ:
-            return "BRZ"
         case BSD:
             return "BSD"
         case BTN:
             return "BTN"
-        case BUK:
-            return "BUK"
         case BWP:
             return "BWP"
-        case BYB:
-            return "BYB"
         case BYR:
             return "BYR"
         case BZD:
@@ -430,46 +396,24 @@ public enum Currency: NumberFormatter {
             return "CAD"
         case CDF:
             return "CDF"
-        case CHE:
-            return "CHE"
         case CHF:
             return "CHF"
-        case CHW:
-            return "CHW"
-        case CLE:
-            return "CLE"
-        case CLF:
-            return "CLF"
         case CLP:
             return "CLP"
-        case CNX:
-            return "CNX"
         case CNY:
             return "CNY"
         case COP:
             return "COP"
-        case COU:
-            return "COU"
         case CRC:
             return "CRC"
-        case CSD:
-            return "CSD"
-        case CSK:
-            return "CSK"
         case CUC:
             return "CUC"
         case CUP:
             return "CUP"
         case CVE:
             return "CVE"
-        case CYP:
-            return "CYP"
         case CZK:
             return "CZK"
-        case DDM:
-            return "DDM"
-        case DEM:
-            return "DEM"
         case DJF:
             return "DJF"
         case DKK:
@@ -478,44 +422,22 @@ public enum Currency: NumberFormatter {
             return "DOP"
         case DZD:
             return "DZD"
-        case ECS:
-            return "ECS"
-        case ECV:
-            return "ECV"
-        case EEK:
-            return "EEK"
         case EGP:
             return "EGP"
-        case EQE:
-            return "EQE"
         case ERN:
             return "ERN"
-        case ESA:
-            return "ESA"
-        case ESB:
-            return "ESB"
-        case ESP:
-            return "ESP"
         case ETB:
             return "ETB"
         case EUR:
             return "EUR"
-        case FIM:
-            return "FIM"
         case FJD:
             return "FJD"
         case FKP:
             return "FKP"
-        case FRF:
-            return "FRF"
         case GBP:
             return "GBP"
-        case GEK:
-            return "GEK"
         case GEL:
             return "GEL"
-        case GHC:
-            return "GHC"
         case GHS:
             return "GHS"
         case GIP:
@@ -524,26 +446,14 @@ public enum Currency: NumberFormatter {
             return "GMD"
         case GNF:
             return "GNF"
-        case GNS:
-            return "GNS"
-        case GQE:
-            return "GQE"
-        case GRD:
-            return "GRD"
         case GTQ:
             return "GTQ"
-        case GWE:
-            return "GWE"
-        case GWP:
-            return "GWP"
         case GYD:
             return "GYD"
         case HKD:
             return "HKD"
         case HNL:
             return "HNL"
-        case HRD:
-            return "HRD"
         case HRK:
             return "HRK"
         case HTG:
@@ -552,12 +462,6 @@ public enum Currency: NumberFormatter {
             return "HUF"
         case IDR:
             return "IDR"
-        case IEP:
-            return "IEP"
-        case ILP:
-            return "ILP"
-        case ILR:
-            return "ILR"
         case ILS:
             return "ILS"
         case INR:
@@ -566,12 +470,8 @@ public enum Currency: NumberFormatter {
             return "IQD"
         case IRR:
             return "IRR"
-        case ISJ:
-            return "ISJ"
         case ISK:
             return "ISK"
-        case ITL:
-            return "ITL"
         case JMD:
             return "JMD"
         case JOD:
@@ -588,10 +488,6 @@ public enum Currency: NumberFormatter {
             return "KMF"
         case KPW:
             return "KPW"
-        case KRH:
-            return "KRH"
-        case KRO:
-            return "KRO"
         case KRW:
             return "KRW"
         case KWD:
@@ -610,44 +506,16 @@ public enum Currency: NumberFormatter {
             return "LRD"
         case LSL:
             return "LSL"
-        case LSM:
-            return "LSM"
-        case LTL:
-            return "LTL"
-        case LTT:
-            return "LTT"
-        case LUC:
-            return "LUC"
-        case LUF:
-            return "LUF"
-        case LUL:
-            return "LUL"
-        case LVL:
-            return "LVL"
-        case LVR:
-            return "LVR"
         case LYD:
             return "LYD"
         case MAD:
             return "MAD"
-        case MAF:
-            return "MAF"
-        case MCF:
-            return "MCF"
-        case MDC:
-            return "MDC"
         case MDL:
             return "MDL"
         case MGA:
             return "MGA"
-        case MGF:
-            return "MGF"
         case MKD:
             return "MKD"
-        case MKN:
-            return "MKN"
-        case MLF:
-            return "MLF"
         case MMK:
             return "MMK"
         case MNT:
@@ -656,43 +524,25 @@ public enum Currency: NumberFormatter {
             return "MOP"
         case MRO:
             return "MRO"
-        case MTL:
-            return "MTL"
-        case MTP:
-            return "MTP"
         case MUR:
             return "MUR"
-        case MVP:
-            return "MVP"
         case MVR:
             return "MVR"
         case MWK: 
             return "MWK"
         case MXN: 
             return "MXN"
-        case MXP: 
-            return "MXP"
-        case MXV: 
-            return "MXV"
-        case MYR: 
+        case MYR:
             return "MYR"
-        case MZE: 
-            return "MZE"
-        case MZM: 
-            return "MZM"
-        case MZN: 
+        case MZN:
             return "MZN"
         case NAD: 
             return "NAD"
         case NGN: 
             return "NGN"
-        case NIC: 
-            return "NIC"
-        case NIO: 
+        case NIO:
             return "NIO"
-        case NLG: 
-            return "NLG"
-        case NOK: 
+        case NOK:
             return "NOK"
         case NPR: 
             return "NPR"
@@ -702,13 +552,9 @@ public enum Currency: NumberFormatter {
             return "OMR"
         case PAB: 
             return "PAB"
-        case PEI: 
-            return "PEI"
-        case PEN: 
+        case PEN:
             return "PEN"
-        case PES: 
-            return "PES"
-        case PGK: 
+        case PGK:
             return "PGK"
         case PHP: 
             return "PHP"
@@ -716,27 +562,17 @@ public enum Currency: NumberFormatter {
             return "PKR"
         case PLN: 
             return "PLN"
-        case PLZ: 
-            return "PLZ"
-        case PTE: 
-            return "PTE"
-        case PYG: 
+        case PYG:
             return "PYG"
         case QAR: 
             return "QAR"
-        case RHD: 
-            return "RHD"
-        case ROL: 
-            return "ROL"
-        case RON: 
+        case RON:
             return "RON"
         case RSD: 
             return "RSD"
         case RUB: 
             return "RUB"
-        case RUR: 
-            return "RUR"
-        case RWF: 
+        case RWF:
             return "RWF"
         case SAR: 
             return "SAR"
@@ -744,37 +580,23 @@ public enum Currency: NumberFormatter {
             return "SBD"
         case SCR: 
             return "SCR"
-        case SDD: 
-            return "SDD"
-        case SDG: 
+        case SDG:
             return "SDG"
-        case SDP: 
-            return "SDP"
-        case SEK: 
+        case SEK:
             return "SEK"
         case SGD: 
             return "SGD"
         case SHP: 
             return "SHP"
-        case SIT: 
-            return "SIT"
-        case SKK: 
-            return "SKK"
-        case SLL: 
+        case SLL:
             return "SLL"
         case SOS: 
             return "SOS"
         case SRD: 
             return "SRD"
-        case SRG: 
-            return "SRG"
-        case SSP: 
-            return "SSP"
-        case STD: 
+        case STD:
             return "STD"
-        case SUR: 
-            return "SUR"
-        case SVC: 
+        case SVC:
             return "SVC"
         case SYP: 
             return "SYP"
@@ -782,23 +604,15 @@ public enum Currency: NumberFormatter {
             return "SZL"
         case THB: 
             return "THB"
-        case TJR: 
-            return "TJR"
-        case TJS: 
+        case TJS:
             return "TJS"
-        case TMM: 
-            return "TMM"
-        case TMT: 
+        case TMT:
             return "TMT"
         case TND: 
             return "TND"
         case TOP: 
             return "TOP"
-        case TPE: 
-            return "TPE"
-        case TRL: 
-            return "TRL"
-        case TRY: 
+        case TRY:
             return "TRY"
         case TTD: 
             return "TTD"
@@ -808,108 +622,40 @@ public enum Currency: NumberFormatter {
             return "TZS"
         case UAH: 
             return "UAH"
-        case UAK: 
-            return "UAK"
-        case UGS: 
-            return "UGS"
-        case UGX: 
+        case UGX:
             return "UGX"
         case USD: 
             return "USD"
-        case USN: 
-            return "USN"
-        case USS: 
-            return "USS"
-        case UYI: 
-            return "UYI"
-        case UYP: 
-            return "UYP"
-        case UYU: 
+        case UYU:
             return "UYU"
         case UZS: 
             return "UZS"
-        case VEB: 
-            return "VEB"
-        case VEF: 
+        case VEF:
             return "VEF"
         case VND: 
             return "VND"
-        case VNN: 
-            return "VNN"
-        case VUV: 
+        case VUV:
             return "VUV"
         case WST: 
             return "WST"
         case XAF: 
             return "XAF"
-        case XAG: 
-            return "XAG"
-        case XAU: 
-            return "XAU"
-        case XBA: 
-            return "XBA"
-        case XBB: 
-            return "XBB"
-        case XBC: 
-            return "XBC"
-        case XBD: 
-            return "XBD"
-        case XCD: 
+        case XCD:
             return "XCD"
         case XDR: 
             return "XDR"
-        case XEU: 
-            return "XEU"
-        case XFO: 
-            return "XFO"
-        case XFU: 
-            return "XFU"
-        case XOF: 
+        case XOF:
             return "XOF"
-        case XPD: 
-            return "XPD"
-        case XPF: 
+        case XPF:
             return "XPF"
-        case XPT: 
-            return "XPT"
-        case XRE: 
-            return "XRE"
-        case XSU: 
-            return "XSU"
-        case XTS: 
-            return "XTS"
-        case XUA: 
-            return "XUA"
-        case XXX: 
-            return "XXX"
-        case YDD: 
-            return "YDD"
-        case YER: 
+        case YER:
             return "YER"
-        case YUD: 
-            return "YUD"
-        case YUM: 
-            return "YUM"
-        case YUN: 
-            return "YUN"
-        case YUR: 
-            return "YUR"
-        case ZAL: 
-            return "ZAL"
-        case ZAR: 
+        case ZAR:
             return "ZAR"
-        case ZMK: 
-            return "ZMK"
-        case ZMW: 
+        case ZMW:
             return "ZMW"
-        case ZRN: 
-            return "ZRN"
-        case ZRZ: 
-            return "ZRZ"
-        case ZWL: 
-            return "ZWL"
-        case ZWR: 
-            return "ZWR"
+        case ZWD:
+            return "ZWD"
         }
     }
     
