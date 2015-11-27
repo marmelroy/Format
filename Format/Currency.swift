@@ -60,6 +60,8 @@ public enum Currency: NumberFormatter {
     case BRL
     /// Bahamas Dollar
     case BSD
+    /// Bitcoin
+    case BTC
     /// Bhutan Ngultrum
     case BTN
     /// Botswana Pula
@@ -384,6 +386,8 @@ public enum Currency: NumberFormatter {
             return "BSD"
         case BTN:
             return "BTN"
+        case BTC:
+            return "BTC"
         case BWP:
             return "BWP"
         case BYR:
