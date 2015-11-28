@@ -63,6 +63,8 @@ class NumberFormatterTests: XCTestCase {
         let frenchLocale = NSLocale(localeIdentifier: "FR")
         let formattedNumberEUR = number.format(Currency.EUR, locale: frenchLocale)
         XCTAssertEqual(formattedNumberEUR, "45,23 €")
+        let formattedNumberBTC = number.format(Currency.BTC, locale: frenchLocale)
+        XCTAssertEqual(formattedNumberBTC, "45,23 Ƀ")
         let formattedNumberGBP = number.format(Currency.GBP)
         XCTAssertEqual(formattedNumberGBP, "£45.23")
         let formattedNumberUSD = number.format(Currency.USD)
@@ -71,6 +73,8 @@ class NumberFormatterTests: XCTestCase {
     
     func testCurrencyFormattingInt() {
         let number = 45
+        let formattedNumberBTC = number.format(Currency.BTC)
+        XCTAssertEqual(formattedNumberBTC, "Ƀ45.00")
         let formattedNumberEUR = number.format(Currency.EUR)
         XCTAssertEqual(formattedNumberEUR, "€45.00")
         let formattedNumberGBP = number.format(Currency.GBP)

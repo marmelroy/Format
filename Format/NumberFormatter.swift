@@ -65,6 +65,11 @@ public class NumberFormat {
         }
         if (formatter.type == .Currency){
             nsFormatter.currencyCode = formatter.modifier
+            if (nsFormatter.currencyCode == Currency.BTC.modifier) {
+                nsFormatter.currencySymbol = "Ƀ";
+            } else {
+                nsFormatter.currencySymbol = nil;
+            }
             formattedString = nsFormatter.stringFromNumber(number)
         }
         if (formatter.type == .General){
