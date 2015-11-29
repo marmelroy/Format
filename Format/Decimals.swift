@@ -11,52 +11,31 @@ import Foundation
 /**
  *  Decimals formatting enum
  */
-public enum Decimals: NumberFormatter {
+public enum Decimals: Int, NumberFormatter {
     /// No decimal numbers.
-    case None
+    case None = 0
     /// 1 decimal numbers.
-    case One
+    case One = 1
     /// 2 decimal numbers.
-    case Two
+    case Two = 2
     /// 3 decimal numbers.
-    case Three
+    case Three = 3
     /// 4 decimal numbers.
-    case Four
+    case Four = 4
     /// 5 decimal numbers.
-    case Five
+    case Five = 5
     /// 6 decimal numbers.
-    case Six
+    case Six = 6
     /// 7 decimal numbers.
-    case Seven
+    case Seven = 7
     /// 8 decimal numbers.
-    case Eight
+    case Eight = 8
     /// 9 decimal numbers.
-    case Nine
+    case Nine = 9
 
     /// Modifier
     public var modifier: String {
-        switch self {
-        case None:
-            return "0"
-        case One:
-            return "1"
-        case Two:
-            return "2"
-        case Three:
-            return "3"
-        case Four:
-            return "4"
-        case Five:
-            return "5"
-        case Six:
-            return "6"
-        case Seven:
-            return "7"
-        case Eight:
-            return "8"
-        case Nine:
-            return "9"
-        }
+        return String(rawValue)
     }
     
     /// Type enum
