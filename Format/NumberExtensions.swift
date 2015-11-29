@@ -8,313 +8,174 @@
 
 import Foundation
 
-// MARK: - Number type formatting extensions
+// MARK: - NumberFormatProvider
 
-public extension CGFloat {
+/**
+ Conforming types can be transformed with Format
+ */
+public protocol NumberFormatProvider {
+    
     /**
-     Format to string using current locale.
+     Returns the `NSNumber` version of the current number.
      
-     - parameter formatter: selected formatter.
-     
-     - returns: formatted string.
+     - returns: An `NSNumber` which reflects the current number.
      */
+    func formatNumber() -> NSNumber
+    
+    /**
+     Returns the transformation of the current number as a `String` based on the current locale.
+     
+     - parameter formatter: A `NumberFormat` which will be used to transform the number.
+     
+     - returns: A string which corresponds to the transformed value of the number according to the 
+     `NumberFormat` provided.
+     */
+    func format(formatter: NumberFormatter) -> String
+    
+    /**
+     Returns the transformation of the current number as a `String` based on the provided locale.
+     
+     - parameter formatter: A `NumberFormat` which will be used to transform the number.
+     - parameter locale:    The `NSLocale` which will be used to transform the number.
+     
+     - returns: A string which corresponds to the transformed value of the number according to the
+     `NumberFormat` provided.
+     */
+    func format(formatter: NumberFormatter, locale: NSLocale) -> String
+}
+
+/**
+ Default implementation of `NumberFormatProvider`
+ */
+extension NumberFormatProvider {
     public func format(formatter: NumberFormatter) -> String {
         let formattedNumber = self.format(formatter, locale: NSLocale.currentLocale())
         return formattedNumber
     }
     
-    /**
-     Format to string using custom locale.
-     
-     - parameter formatter: selected formatter.
-     - parameter locale:    custom locale.
-     
-     - returns: formatted string.
-     */
     public func format(formatter: NumberFormatter, locale: NSLocale) -> String {
-        let number = self as NSNumber
-        let formattedNumber = NumberFormat.sharedInstance.format(number, formatter: formatter, locale: locale)
+        let formattedNumber = NumberFormat.sharedInstance.format(formatNumber(), formatter: formatter, locale: locale)
         return formattedNumber
     }
 }
 
-public extension Double {
-    /**
-     Format to string using current locale.
-     
-     - parameter formatter: selected formatter.
-     
-     - returns: formatted string.
-     */
-    public func format(formatter: NumberFormatter) -> String {
-        let formattedNumber = self.format(formatter, locale: NSLocale.currentLocale())
-        return formattedNumber
-    }
-    
-    /**
-     Format to string using custom locale.
-     
-     - parameter formatter: selected formatter.
-     - parameter locale:    custom locale.
-     
-     - returns: formatted string.
-     */
-    public func format(formatter: NumberFormatter, locale: NSLocale) -> String {
-        let number = self as NSNumber
-        let formattedNumber = NumberFormat.sharedInstance.format(number, formatter: formatter, locale: locale)
-        return formattedNumber
+// MARK: - Number Extensions
+
+/**
+ `CGFloat` conforming to `NumberFormatProvider`
+ */
+extension CGFloat: NumberFormatProvider {
+    public func formatNumber() -> NSNumber {
+        return self as NSNumber
     }
 }
 
-public extension Float {
-    /**
-     Format to string using current locale.
-     
-     - parameter formatter: selected formatter.
-     
-     - returns: formatted string.
-     */
-    public func format(formatter: NumberFormatter) -> String {
-        let formattedNumber = self.format(formatter, locale: NSLocale.currentLocale())
-        return formattedNumber
-    }
-    
-    /**
-     Format to string using custom locale.
-     
-     - parameter formatter: selected formatter.
-     - parameter locale:    custom locale.
-     
-     - returns: formatted string.
-     */
-    public func format(formatter: NumberFormatter, locale: NSLocale) -> String {
-        let number = self as NSNumber
-        let formattedNumber = NumberFormat.sharedInstance.format(number, formatter: formatter, locale: locale)
-        return formattedNumber
+/**
+ `Bool` conforming to `NumberFormatProvider`
+ */
+
+extension Bool: NumberFormatProvider {
+    public func formatNumber() -> NSNumber {
+        return NSNumber(bool: self)
     }
 }
 
+/**
+ `Double` conforming to `NumberFormatProvider`
+ */
 
-public extension Int {
-    /**
-     Format to string using current locale.
-     
-     - parameter formatter: selected formatter.
-     
-     - returns: formatted string.
-     */
-    public func format(formatter: NumberFormatter) -> String {
-        let formattedNumber = self.format(formatter, locale: NSLocale.currentLocale())
-        return formattedNumber
-    }
-    
-    /**
-     Format to string using custom locale.
-     
-     - parameter formatter: selected formatter.
-     - parameter locale:    custom locale.
-     
-     - returns: formatted string.
-     */
-    public func format(formatter: NumberFormatter, locale: NSLocale) -> String {
-        let number = self as NSNumber
-        let formattedNumber = NumberFormat.sharedInstance.format(number, formatter: formatter, locale: locale)
-        return formattedNumber
+extension Double: NumberFormatProvider {
+    public func formatNumber() -> NSNumber {
+        return NSNumber(double: self)
     }
 }
 
-public extension Int16 {
-    /**
-     Format to string using current locale.
-     
-     - parameter formatter: selected formatter.
-     
-     - returns: formatted string.
-     */
-    public func format(formatter: NumberFormatter) -> String {
-        let formattedNumber = self.format(formatter, locale: NSLocale.currentLocale())
-        return formattedNumber
-    }
-    
-    /**
-     Format to string using custom locale.
-     
-     - parameter formatter: selected formatter.
-     - parameter locale:    custom locale.
-     
-     - returns: formatted string.
-     */
-    public func format(formatter: NumberFormatter, locale: NSLocale) -> String {
-        let number = NSNumber(short: self)
-        let formattedNumber = NumberFormat.sharedInstance.format(number, formatter: formatter, locale: locale)
-        return formattedNumber
+/**
+ `Float` conforming to `NumberFormatProvider`
+ */
+
+extension Float: NumberFormatProvider {
+    public func formatNumber() -> NSNumber {
+        return NSNumber(float: self)
     }
 }
 
-public extension Int32 {
-    /**
-     Format to string using current locale.
-     
-     - parameter formatter: selected formatter.
-     
-     - returns: formatted string.
-     */
-    public func format(formatter: NumberFormatter) -> String {
-        let formattedNumber = self.format(formatter, locale: NSLocale.currentLocale())
-        return formattedNumber
-    }
-    
-    /**
-     Format to string using custom locale.
-     
-     - parameter formatter: selected formatter.
-     - parameter locale:    custom locale.
-     
-     - returns: formatted string.
-     */
-    public func format(formatter: NumberFormatter, locale: NSLocale) -> String {
-        let number = NSNumber(int: self)
-        let formattedNumber = NumberFormat.sharedInstance.format(number, formatter: formatter, locale: locale)
-        return formattedNumber
+/**
+ `Int` conforming to `NumberFormatProvider`
+ */
+
+extension Int: NumberFormatProvider {
+    public func formatNumber() -> NSNumber {
+        return NSNumber(integer: self)
     }
 }
 
-public extension Int64 {
-    /**
-     Format to string using current locale.
-     
-     - parameter formatter: selected formatter.
-     
-     - returns: formatted string.
-     */
-    public func format(formatter: NumberFormatter) -> String {
-        let formattedNumber = self.format(formatter, locale: NSLocale.currentLocale())
-        return formattedNumber
-    }
-    
-    /**
-     Format to string using custom locale.
-     
-     - parameter formatter: selected formatter.
-     - parameter locale:    custom locale.
-     
-     - returns: formatted string.
-     */
-    public func format(formatter: NumberFormatter, locale: NSLocale) -> String {
-        let number = NSNumber(longLong: self)
-        let formattedNumber = NumberFormat.sharedInstance.format(number, formatter: formatter, locale: locale)
-        return formattedNumber
+/**
+ `Int16` conforming to `NumberFormatProvider`
+ */
+
+extension Int16: NumberFormatProvider {
+    public func formatNumber() -> NSNumber {
+        return NSNumber(short: self)
     }
 }
 
-public extension UInt {
-    /**
-     Format to string using current locale.
-     
-     - parameter formatter: selected formatter.
-     
-     - returns: formatted string.
-     */
-    public func format(formatter: NumberFormatter) -> String {
-        let formattedNumber = self.format(formatter, locale: NSLocale.currentLocale())
-        return formattedNumber
-    }
-    
-    /**
-     Format to string using custom locale.
-     
-     - parameter formatter: selected formatter.
-     - parameter locale:    custom locale.
-     
-     - returns: formatted string.
-     */
-    public func format(formatter: NumberFormatter, locale: NSLocale) -> String {
-        let number = self as NSNumber
-        let formattedNumber = NumberFormat.sharedInstance.format(number, formatter: formatter, locale: locale)
-        return formattedNumber
+/**
+ `Int32` conforming to `NumberFormatProvider`
+ */
+
+extension Int32: NumberFormatProvider {
+    public func formatNumber() -> NSNumber {
+        return NSNumber(int: self)
     }
 }
 
-public extension UInt16 {
-    /**
-     Format to string using current locale.
-     
-     - parameter formatter: selected formatter.
-     
-     - returns: formatted string.
-     */
-    public func format(formatter: NumberFormatter) -> String {
-        let formattedNumber = self.format(formatter, locale: NSLocale.currentLocale())
-        return formattedNumber
-    }
-    
-    /**
-     Format to string using custom locale.
-     
-     - parameter formatter: selected formatter.
-     - parameter locale:    custom locale.
-     
-     - returns: formatted string.
-     */
-    public func format(formatter: NumberFormatter, locale: NSLocale) -> String {
-        let number = NSNumber(unsignedShort: self)
-        let formattedNumber = NumberFormat.sharedInstance.format(number, formatter: formatter, locale: locale)
-        return formattedNumber
+/**
+ `Int64` conforming to `NumberFormatProvider`
+ */
+
+extension Int64: NumberFormatProvider {
+    public func formatNumber() -> NSNumber {
+        return NSNumber(longLong: self)
     }
 }
 
-public extension UInt32 {
-    /**
-     Format to string using current locale.
-     
-     - parameter formatter: selected formatter.
-     
-     - returns: formatted string.
-     */
-    public func format(formatter: NumberFormatter) -> String {
-        let formattedNumber = self.format(formatter, locale: NSLocale.currentLocale())
-        return formattedNumber
-    }
-    
-    /**
-     Format to string using custom locale.
-     
-     - parameter formatter: selected formatter.
-     - parameter locale:    custom locale.
-     
-     - returns: formatted string.
-     */
-    public func format(formatter: NumberFormatter, locale: NSLocale) -> String {
-        let number = NSNumber(unsignedInt: self)
-        let formattedNumber = NumberFormat.sharedInstance.format(number, formatter: formatter, locale: locale)
-        return formattedNumber
+/**
+ `UInt` conforming to `NumberFormatProvider`
+ */
+
+extension UInt: NumberFormatProvider {
+    public func formatNumber() -> NSNumber {
+        return NSNumber(unsignedInteger: self)
     }
 }
 
-public extension UInt64 {
-    /**
-     Format to string using current locale.
-     
-     - parameter formatter: selected formatter.
-     
-     - returns: formatted string.
-     */
-    public func format(formatter: NumberFormatter) -> String {
-        let formattedNumber = self.format(formatter, locale: NSLocale.currentLocale())
-        return formattedNumber
+/**
+ `UInt16` conforming to `NumberFormatProvider`
+ */
+
+extension UInt16: NumberFormatProvider {
+    public func formatNumber() -> NSNumber {
+        return NSNumber(unsignedShort: self)
     }
-    
-    /**
-     Format to string using custom locale.
-     
-     - parameter formatter: selected formatter.
-     - parameter locale:    custom locale.
-     
-     - returns: formatted string.
-     */
-    public func format(formatter: NumberFormatter, locale: NSLocale) -> String {
-        let number = NSNumber(unsignedLongLong: self)
-        let formattedNumber = NumberFormat.sharedInstance.format(number, formatter: formatter, locale: locale)
-        return formattedNumber
+}
+
+/**
+ `UInt32` conforming to `NumberFormatProvider`
+ */
+
+extension UInt32: NumberFormatProvider {
+    public func formatNumber() -> NSNumber {
+        return NSNumber(unsignedInt: self)
+    }
+}
+
+/**
+ `UInt64` conforming to `NumberFormatProvider`
+ */
+
+extension UInt64: NumberFormatProvider {
+    public func formatNumber() -> NSNumber {
+        return NSNumber(unsignedLongLong: self)
     }
 }
