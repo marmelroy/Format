@@ -146,7 +146,7 @@ extension Int64: NumberFormatProvider {
 
 extension UInt: NumberFormatProvider {
     public func formatNumber() -> NSNumber {
-        return NSNumber(unsignedInteger: self)
+        return NSNumber(unsignedLong: self)
     }
 }
 
