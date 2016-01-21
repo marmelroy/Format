@@ -56,31 +56,24 @@ public class NumberFormat {
         nsFormatter.locale = locale
         distanceFormatter.locale = locale
         var formattedString: String?
-        if (formatter.type == .Decimal){
+        if (formatter.type == .Decimal) {
             if let modifierAsInt = Int(formatter.modifier) {
                 nsFormatter.maximumFractionDigits = modifierAsInt
                 nsFormatter.minimumFractionDigits = modifierAsInt
             }
             formattedString = nsFormatter.stringFromNumber(number)
         }
-        if (formatter.type == .Currency){
+        if (formatter.type == .Currency) {
             nsFormatter.currencyCode = formatter.modifier
-            if (nsFormatter.currencyCode == Currency.BTC.modifier) {
-                nsFormatter.currencySymbol = "Ƀ";
-            } else {
-                nsFormatter.currencySymbol = nil;
-            }
+            nsFormatter.currencySymbol = (nsFormatter.currencyCode == Currency.BTC.modifier) ? "Ƀ" : nil
             formattedString = nsFormatter.stringFromNumber(number)
         }
-        if (formatter.type == .General){
+        if (formatter.type == .General) {
             if formatter.modifier == NumberFormatterOrdinalKey {
-                let roundedDownNumber = floor(number.doubleValue)
-                formattedString = nsFormatter.stringFromNumber(roundedDownNumber)
-            }
-            else if formatter.modifier == NumberFormatterSpellOutKey {
+                formattedString = nsFormatter.stringFromNumber(floor(number.doubleValue))
+            } else if formatter.modifier == NumberFormatterSpellOutKey {
                 formattedString = nsFormatter.stringFromNumber(number)
-            }
-            else if formatter.modifier == NumberFormatterDistanceKey {
+            } else if formatter.modifier == NumberFormatterDistanceKey {
                 let distance = number as CLLocationDistance
                 formattedString = distanceFormatter.stringFromDistance(distance)
             }
