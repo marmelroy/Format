@@ -30,16 +30,16 @@ public enum General: NumberFormatter {
 
     /// Type enum
     public var type: NumberFormatterType {
-        return NumberFormatterType.General
+        return .General
     }
     
     /// NSNumberFormatter style
     public var style: NSNumberFormatterStyle? {
         switch self {
         case Ordinal:
-            return NSNumberFormatterStyle.OrdinalStyle
+            return .OrdinalStyle
         case SpellOut:
-            return NSNumberFormatterStyle.SpellOutStyle
+            return .SpellOutStyle
         case Distance:
             return nil
         }

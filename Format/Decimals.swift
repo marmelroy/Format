@@ -40,12 +40,12 @@ public enum Decimals: Int, NumberFormatter {
     
     /// Type enum
     public var type: NumberFormatterType {
-        return NumberFormatterType.Decimal
+        return .Decimal
     }
     
     /// NSNumberFormatter style
     public var style: NSNumberFormatterStyle? {
-        return NSNumberFormatterStyle.DecimalStyle
+        return .DecimalStyle
     }
     
 }
