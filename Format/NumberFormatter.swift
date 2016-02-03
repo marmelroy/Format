@@ -20,6 +20,7 @@ public enum NumberFormatterType {
     case Currency
     case Decimal
     case General
+    case Mass
 }
 
 /**
@@ -31,6 +32,8 @@ public protocol NumberFormatter {
     var style: NSNumberFormatterStyle? { get }
 }
 
+public protocol NumberFormatterCustomLocaleAvailable: NumberFormatter {}
+
 /// Number format class
 public class NumberFormat {
     
@@ -39,22 +42,35 @@ public class NumberFormat {
     var nsFormatter = NSNumberFormatter()
     
     let distanceFormatter = MKDistanceFormatter()
+    
+    let massFormatter = NSMassFormatter()
 
+    public func format(number: NSNumber, formatter: NumberFormatter) -> String{
+        if let customLocaleFormatter = formatter as? NumberFormatterCustomLocaleAvailable {
+            return format(number, formatter: customLocaleFormatter, locale: NSLocale.currentLocale())
+        }
+        else {
+            return defaultLocaleOnlyFormat(number, formatter: formatter)
+        }
+    }
+    
     /**
-     Number formatting function. Inits the NSFormatter again if style changes.
+     Number formatting function for formatters that accept custom locales. Inits the NSFormatter again if style changes.
      
      - parameter number:    number to format as an NSNumber.
      - parameter formatter: the formatter to be applied, conforms to NumberFormatter protocol.
+     - parameter locale:    locale to use.
      
      - returns: formatted string.
      */
-    public func format(number: NSNumber, formatter: NumberFormatter, locale: NSLocale) -> String{
+    public func format(number: NSNumber, formatter: NumberFormatterCustomLocaleAvailable, locale: NSLocale) -> String{
         if let style = formatter.style where nsFormatter.numberStyle != style {
             nsFormatter = NSNumberFormatter()
             nsFormatter.numberStyle = style
         }
         nsFormatter.locale = locale
         distanceFormatter.locale = locale
+
         var formattedString: String?
         if (formatter.type == .Decimal) {
             if let modifierAsInt = Int(formatter.modifier) {
@@ -83,5 +99,18 @@ public class NumberFormat {
         }
         return finalString
     }
+    
+    internal func defaultLocaleOnlyFormat(number: NSNumber, formatter: NumberFormatter) -> String {
+        var formattedString: String?
+        if (formatter.type == .Mass) {
+            massFormatter.forPersonMassUse = (formatter.modifier == MassFormatterPersonKey)
+            formattedString = massFormatter.stringFromKilograms(number.doubleValue)
+        }
+        guard let finalString = formattedString else {
+        return ""
+        }
+        return finalString
+    }
+
 }
 

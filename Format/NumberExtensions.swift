@@ -41,19 +41,34 @@ public protocol NumberFormatProvider {
      - returns: A string which corresponds to the transformed value of the number according to the
      `NumberFormat` provided.
      */
-    func format(formatter: NumberFormatter, locale: NSLocale) -> String
+    func format(formatter: NumberFormatterCustomLocaleAvailable, locale: NSLocale) -> String
 }
 
 /**
  Default implementation of `NumberFormatProvider`
  */
 extension NumberFormatProvider {
+    /**
+     Format to the current locale.
+     
+     - parameter formatter: Number formatter.
+     
+     - returns: Formatted string.
+     */
     public func format(formatter: NumberFormatter) -> String {
-        let formattedNumber = self.format(formatter, locale: NSLocale.currentLocale())
+        let formattedNumber = NumberFormat.sharedInstance.format(formatNumber(), formatter: formatter)
         return formattedNumber
     }
     
-    public func format(formatter: NumberFormatter, locale: NSLocale) -> String {
+    /**
+     Format to a custom locale (not all formatters supported)
+     
+     - parameter formatter: Number formatter.
+     - parameter locale:    Custom locale.
+     
+     - returns: Formatted string.
+     */
+    public func format(formatter: NumberFormatterCustomLocaleAvailable, locale: NSLocale) -> String {
         let formattedNumber = NumberFormat.sharedInstance.format(formatNumber(), formatter: formatter, locale: locale)
         return formattedNumber
     }
