@@ -169,6 +169,35 @@ class NumberFormatterTests: XCTestCase {
         let formattedNumber = number.format(General.Distance, locale: frenchLocale)
         XCTAssertEqual(formattedNumber, "500 m")
     }
+    
+    /**
+     Mass
+     */
+    
+    func testMassDoublePerson() {
+        let number = 67 // kg
+        let formattedNumber = number.format(Mass.Person)
+        XCTAssertEqual(formattedNumber, "147.71 lb")
+    }
+    
+    func testMassDoublePersonGeneric() {
+        let number = 67 // kg
+        let formattedNumber = number.format(Mass.Generic)
+        XCTAssertEqual(formattedNumber, "147.71 lb")
+    }
+
+
+    func testMassDoubleZeroGeneric() {
+        let number = 0.0 // kg
+        let formattedNumber = number.format(Mass.Generic)
+        XCTAssertEqual(formattedNumber, "0 lb")
+    }
+    
+    func testMassDoubleNegativeGeneric() {
+        let number = -10.0 // kg
+        let formattedNumber = number.format(Mass.Generic)
+        XCTAssertEqual(formattedNumber, "-22.046 lb")
+    }
 
 
 }

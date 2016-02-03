@@ -24,6 +24,7 @@
 		345E9B821BF8932000A88BD7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345E9B811BF8932000A88BD7 /* CoreLocation.framework */; };
 		34C74C121C0533E400B4342B /* ColorFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C74C111C0533E400B4342B /* ColorFormatterTests.swift */; };
 		34C74C141C05392D00B4342B /* NumberFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C74C131C05392D00B4342B /* NumberFormatterTests.swift */; };
+		34FA3E471C5FB80A000442D3 /* Mass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FA3E461C5FB80A000442D3 /* Mass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		345E9B811BF8932000A88BD7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		34C74C111C0533E400B4342B /* ColorFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorFormatterTests.swift; sourceTree = "<group>"; };
 		34C74C131C05392D00B4342B /* NumberFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFormatterTests.swift; sourceTree = "<group>"; };
+		34FA3E461C5FB80A000442D3 /* Mass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				340F3D2C1BF5E1F1000C2EA8 /* Decimals.swift */,
 				345E9B731BF8826100A88BD7 /* Currency.swift */,
 				345E9B751BF88CF900A88BD7 /* General.swift */,
+				34FA3E461C5FB80A000442D3 /* Mass.swift */,
 			);
 			name = Numbers;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				340F3D2B1BF5E1DE000C2EA8 /* NumberExtensions.swift in Sources */,
 				340F3D2F1BF5E213000C2EA8 /* NumberFormatter.swift in Sources */,
 				340F3D2D1BF5E1F1000C2EA8 /* Decimals.swift in Sources */,
+				34FA3E471C5FB80A000442D3 /* Mass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
