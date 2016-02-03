@@ -86,5 +86,5 @@ github "marmelroy/Format"
 ### Setting up with [CocoaPods](http://cocoapods.org/?q=PhoneNumberKit)
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-pod 'Format', '~> 0.1'
+pod 'Format', '~> 0.2'
 ```
