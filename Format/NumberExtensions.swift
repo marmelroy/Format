@@ -48,26 +48,12 @@ public protocol NumberFormatProvider {
  Default implementation of `NumberFormatProvider`
  */
 extension NumberFormatProvider {
-    /**
-     Format to the current locale.
-     
-     - parameter formatter: Number formatter.
-     
-     - returns: Formatted string.
-     */
+    
     public func format(formatter: NumberFormatter) -> String {
         let formattedNumber = NumberFormat.sharedInstance.format(formatNumber(), formatter: formatter)
         return formattedNumber
     }
-    
-    /**
-     Format to a custom locale (not all formatters supported)
-     
-     - parameter formatter: Number formatter.
-     - parameter locale:    Custom locale.
-     
-     - returns: Formatted string.
-     */
+
     public func format(formatter: NumberFormatterCustomLocaleAvailable, locale: NSLocale) -> String {
         let formattedNumber = NumberFormat.sharedInstance.format(formatNumber(), formatter: formatter, locale: locale)
         return formattedNumber

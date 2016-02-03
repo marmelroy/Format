@@ -4,7 +4,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 # Format
-A Swift 2 formatter kit. Simple formatting syntax for decimal numbers, currency, addresses, ordinal numbers and hexadecimal colors.
+A Swift formatter kit. Simple formatting syntax for decimal numbers, currency, mass, addresses, ordinal numbers and hexadecimal colors.
 
 ## Usage
 
@@ -36,6 +36,7 @@ Currency.USD // $10.12
 General.Ordinal // 10th
 General.SpellOut // ten point one two three
 General.Distance // 30 feet
+Mass.Person // 67 kg
 ```
 
 The distance formatter assumes the number represents the distance in meters before converting and formatting it to the current locale's preferred unit.

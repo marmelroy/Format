@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Format"
-  s.version          = "0.1.3"
+  s.version          = "0.2.0"
   s.summary          = "A Swift formatter kit."
 
 # This description is used to generate tags and improve search results.
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description      = <<-DESC
-                        A Swift formatting framework. Simple formatting syntax for decimal numbers, currency, addresses, ordinal numbers and hexadecimal colors.
+                        A Swift formatting framework. Simple formatting syntax for decimal numbers, currency, mass, addresses, ordinal numbers and hexadecimal colors.
                        DESC
 
   s.homepage         = "https://github.com/marmelroy/Format"
