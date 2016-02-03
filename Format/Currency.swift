@@ -11,7 +11,7 @@ import Foundation
 /**
  *  Currency formatter
  */
-public enum Currency: String, NumberFormatter {
+public enum Currency: String, NumberFormatter, NumberFormatterCustomLocaleAvailable {
     /// Andorran Peseta
     case ADP
     /// Arab Emirates Dirham

@@ -11,7 +11,7 @@ import Foundation
 /**
  *  General formatter.
  */
-public enum General: NumberFormatter {
+public enum General: NumberFormatter, NumberFormatterCustomLocaleAvailable {
     case Ordinal // Ordinal number in the current locale (e.g. 18eme)
     case SpellOut // Spells out the number in the current locale (e.g. Forty Two).
     case Distance // Takes the source number as distance in meters. Display in current locale.

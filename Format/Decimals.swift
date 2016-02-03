@@ -11,7 +11,7 @@ import Foundation
 /**
  *  Decimals formatting enum
  */
-public enum Decimals: Int, NumberFormatter {
+public enum Decimals: Int, NumberFormatter, NumberFormatterCustomLocaleAvailable {
     /// No decimal numbers.
     case None = 0
     /// 1 decimal numbers.
