@@ -37,7 +37,12 @@ public enum General: NumberFormatter, NumberFormatterCustomLocaleAvailable {
     public var style: NSNumberFormatterStyle? {
         switch self {
         case Ordinal:
-            return .OrdinalStyle
+            if #available(iOS 9.0, *) {
+                return .OrdinalStyle
+            } else {
+                assertionFailure("Ordinal Style is only available from iOS9")
+                return nil;
+            }
         case SpellOut:
             return .SpellOutStyle
         case Distance:

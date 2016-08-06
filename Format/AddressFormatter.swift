@@ -10,6 +10,7 @@ import Foundation
 import Contacts
 
 /// Address formatter class.
+@available(iOS 9.0, *)
 public class AddressFormatter {
 
     let postalFormatter = CNPostalAddressFormatter()

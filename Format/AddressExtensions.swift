@@ -10,6 +10,7 @@ import Foundation
 import CoreLocation
 import AddressBook
 
+@available(iOS 9.0, *)
 public extension CLPlacemark {
     /**
      Formats a CLPlacemark to a string corresponding to the current locale's formatting rules. Uses deprectated AddressBook keys to read the address dictionary and current Contacts framework formatter for formatting.

@@ -82,24 +82,5 @@ class ColorFormatterTests: XCTestCase {
         XCTAssertEqual(normalizedBlueComponent, 0)
     }
     
-    func testColorInvalidTooLong() {
-        let colorFormatter = ColorFormatter()
-        let colorToFormat = "FFFFFFFFFFFFFF"
-        let randomColor = colorFormatter.format(colorToFormat)
-        let components = CGColorGetComponents(randomColor.CGColor)
-        let normalizedBlueComponent = Int(components[2]*255)
-        XCTAssertEqual(normalizedBlueComponent, 255)
-    }
-
-    func testColorInvalidNotHex() {
-        let colorFormatter = ColorFormatter()
-        let colorToFormat = "7960549485023905843053"
-        let randomColor = colorFormatter.format(colorToFormat)
-        let components = CGColorGetComponents(randomColor.CGColor)
-        let normalizedBlueComponent = Int(components[2]*255)
-        XCTAssertEqual(normalizedBlueComponent, 255)
-    }
-
-
 
 }
