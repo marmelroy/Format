@@ -33,7 +33,7 @@ Apply any of these formatters to any number type:
 ```swift
 Decimals.Three // 10.123
 Currency.USD // $10.12
-General.Ordinal // 10th
+General.Ordinal // 10th (iOS9+ only)
 General.SpellOut // ten point one two three
 General.Distance // 30 feet
 Mass.Person // 67 kg
@@ -41,7 +41,7 @@ Mass.Person // 67 kg
 
 The distance formatter assumes the number represents the distance in meters before converting and formatting it to the current locale's preferred unit.
 
-## Address Formatting
+## Address Formatting (iOS9.0+ only)
 
 Different cultures have [different ways of displaying addresses](https://en.wikipedia.org/wiki/Address_(geography)#Address_format). Format includes an extension on CLPlacemark that converts the addressDictionary to a formatted string in the current locale:
 
@@ -86,5 +86,5 @@ github "marmelroy/Format"
 ### Setting up with [CocoaPods](http://cocoapods.org/?q=PhoneNumberKit)
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-pod 'Format', '~> 0.2'
+pod 'Format', '~> 0.3'
 ```
