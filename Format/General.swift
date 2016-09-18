@@ -12,40 +12,40 @@ import Foundation
  *  General formatter.
  */
 public enum General: NumberFormatter, NumberFormatterCustomLocaleAvailable {
-    case Ordinal // Ordinal number in the current locale (e.g. 18eme)
-    case SpellOut // Spells out the number in the current locale (e.g. Forty Two).
-    case Distance // Takes the source number as distance in meters. Display in current locale.
+    case ordinal // Ordinal number in the current locale (e.g. 18eme)
+    case spellOut // Spells out the number in the current locale (e.g. Forty Two).
+    case distance // Takes the source number as distance in meters. Display in current locale.
 
     /// Modifier
     public var modifier: String {
         switch self {
-        case Ordinal:
+        case .ordinal:
             return NumberFormatterOrdinalKey
-        case SpellOut:
+        case .spellOut:
             return NumberFormatterSpellOutKey
-        case Distance:
+        case .distance:
             return NumberFormatterDistanceKey
         }
     }
 
     /// Type enum
     public var type: NumberFormatterType {
-        return .General
+        return .general
     }
     
     /// NSNumberFormatter style
-    public var style: NSNumberFormatterStyle? {
+    public var style: Foundation.NumberFormatter.Style? {
         switch self {
-        case Ordinal:
+        case .ordinal:
             if #available(iOS 9.0, *) {
-                return .OrdinalStyle
+                return .ordinal
             } else {
                 assertionFailure("Ordinal Style is only available from iOS9")
                 return nil;
             }
-        case SpellOut:
-            return .SpellOutStyle
-        case Distance:
+        case .spellOut:
+            return .spellOut
+        case .distance:
             return nil
         }
     }

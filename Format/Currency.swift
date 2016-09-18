@@ -340,12 +340,12 @@ public enum Currency: String, NumberFormatter, NumberFormatterCustomLocaleAvaila
     
     /// Type enum
     public var type: NumberFormatterType {
-        return .Currency
+        return .currency
     }
     
     /// NSNumberFormatter style
-    public var style: NSNumberFormatterStyle? {
-        return .CurrencyStyle
+    public var style: Foundation.NumberFormatter.Style? {
+        return .currency
     }
 
 }

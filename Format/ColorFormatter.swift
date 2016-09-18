@@ -9,7 +9,7 @@
 import Foundation
 
 /// Color formatter
-public class ColorFormatter {
+open class ColorFormatter {
     /**
      Init
      
@@ -24,12 +24,12 @@ public class ColorFormatter {
      
      - returns: UIColor
      */
-    public func format(hex: String) -> UIColor {
-        let scanner = NSScanner(string: hex)
-        scanner.charactersToBeSkipped = NSCharacterSet.alphanumericCharacterSet().invertedSet
+    open func format(_ hex: String) -> UIColor {
+        let scanner = Scanner(string: hex)
+        scanner.charactersToBeSkipped = CharacterSet.alphanumerics.inverted
         
         var value: UInt32 = 0;
-        scanner.scanHexInt(&value)
+        scanner.scanHexInt32(&value)
         
         let red = CGFloat(Float(Int(value >> 16) & 0x000000FF) / 255.0)
         let green = CGFloat(Float(Int(value >> 8) & 0x000000FF) / 255.0)

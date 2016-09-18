@@ -30,7 +30,7 @@ public protocol NumberFormatProvider {
      - returns: A string which corresponds to the transformed value of the number according to the 
      `NumberFormat` provided.
      */
-    func format(formatter: NumberFormatter) -> String
+    func format(_ formatter: NumberFormatter) -> String
     
     /**
      Returns the transformation of the current number as a `String` based on the provided locale.
@@ -41,7 +41,7 @@ public protocol NumberFormatProvider {
      - returns: A string which corresponds to the transformed value of the number according to the
      `NumberFormat` provided.
      */
-    func format(formatter: NumberFormatterCustomLocaleAvailable, locale: NSLocale) -> String
+    func format(_ formatter: NumberFormatterCustomLocaleAvailable, locale: Locale) -> String
 }
 
 /**
@@ -49,12 +49,12 @@ public protocol NumberFormatProvider {
  */
 extension NumberFormatProvider {
     
-    public func format(formatter: NumberFormatter) -> String {
+    public func format(_ formatter: NumberFormatter) -> String {
         let formattedNumber = NumberFormat.sharedInstance.format(formatNumber(), formatter: formatter)
         return formattedNumber
     }
 
-    public func format(formatter: NumberFormatterCustomLocaleAvailable, locale: NSLocale) -> String {
+    public func format(_ formatter: NumberFormatterCustomLocaleAvailable, locale: Locale) -> String {
         let formattedNumber = NumberFormat.sharedInstance.format(formatNumber(), formatter: formatter, locale: locale)
         return formattedNumber
     }
@@ -77,7 +77,7 @@ extension CGFloat: NumberFormatProvider {
 
 extension Bool: NumberFormatProvider {
     public func formatNumber() -> NSNumber {
-        return NSNumber(bool: self)
+        return NSNumber(value: self as Bool)
     }
 }
 
@@ -87,7 +87,7 @@ extension Bool: NumberFormatProvider {
 
 extension Double: NumberFormatProvider {
     public func formatNumber() -> NSNumber {
-        return NSNumber(double: self)
+        return NSNumber(value: self as Double)
     }
 }
 
@@ -97,7 +97,7 @@ extension Double: NumberFormatProvider {
 
 extension Float: NumberFormatProvider {
     public func formatNumber() -> NSNumber {
-        return NSNumber(float: self)
+        return NSNumber(value: self as Float)
     }
 }
 
@@ -107,7 +107,7 @@ extension Float: NumberFormatProvider {
 
 extension Int: NumberFormatProvider {
     public func formatNumber() -> NSNumber {
-        return NSNumber(integer: self)
+        return NSNumber(value: self as Int)
     }
 }
 
@@ -117,7 +117,7 @@ extension Int: NumberFormatProvider {
 
 extension Int16: NumberFormatProvider {
     public func formatNumber() -> NSNumber {
-        return NSNumber(short: self)
+        return NSNumber(value: self as Int16)
     }
 }
 
@@ -127,7 +127,7 @@ extension Int16: NumberFormatProvider {
 
 extension Int32: NumberFormatProvider {
     public func formatNumber() -> NSNumber {
-        return NSNumber(int: self)
+        return NSNumber(value: self as Int32)
     }
 }
 
@@ -137,7 +137,7 @@ extension Int32: NumberFormatProvider {
 
 extension Int64: NumberFormatProvider {
     public func formatNumber() -> NSNumber {
-        return NSNumber(longLong: self)
+        return NSNumber(value: self as Int64)
     }
 }
 
@@ -147,7 +147,7 @@ extension Int64: NumberFormatProvider {
 
 extension UInt: NumberFormatProvider {
     public func formatNumber() -> NSNumber {
-        return NSNumber(unsignedInteger: self)
+        return NSNumber(value: self as UInt)
     }
 }
 
@@ -157,7 +157,7 @@ extension UInt: NumberFormatProvider {
 
 extension UInt16: NumberFormatProvider {
     public func formatNumber() -> NSNumber {
-        return NSNumber(unsignedShort: self)
+        return NSNumber(value: self as UInt16)
     }
 }
 
@@ -167,7 +167,7 @@ extension UInt16: NumberFormatProvider {
 
 extension UInt32: NumberFormatProvider {
     public func formatNumber() -> NSNumber {
-        return NSNumber(unsignedInt: self)
+        return NSNumber(value: self as UInt32)
     }
 }
 
@@ -177,6 +177,6 @@ extension UInt32: NumberFormatProvider {
 
 extension UInt64: NumberFormatProvider {
     public func formatNumber() -> NSNumber {
-        return NSNumber(unsignedLongLong: self)
+        return NSNumber(value: self as UInt64)
     }
 }

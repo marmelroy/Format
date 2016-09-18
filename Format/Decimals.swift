@@ -13,25 +13,25 @@ import Foundation
  */
 public enum Decimals: Int, NumberFormatter, NumberFormatterCustomLocaleAvailable {
     /// No decimal numbers.
-    case None = 0
+    case none = 0
     /// 1 decimal numbers.
-    case One = 1
+    case one = 1
     /// 2 decimal numbers.
-    case Two = 2
+    case two = 2
     /// 3 decimal numbers.
-    case Three = 3
+    case three = 3
     /// 4 decimal numbers.
-    case Four = 4
+    case four = 4
     /// 5 decimal numbers.
-    case Five = 5
+    case five = 5
     /// 6 decimal numbers.
-    case Six = 6
+    case six = 6
     /// 7 decimal numbers.
-    case Seven = 7
+    case seven = 7
     /// 8 decimal numbers.
-    case Eight = 8
+    case eight = 8
     /// 9 decimal numbers.
-    case Nine = 9
+    case nine = 9
 
     /// Modifier
     public var modifier: String {
@@ -40,12 +40,12 @@ public enum Decimals: Int, NumberFormatter, NumberFormatterCustomLocaleAvailable
     
     /// Type enum
     public var type: NumberFormatterType {
-        return .Decimal
+        return .decimal
     }
     
     /// NSNumberFormatter style
-    public var style: NSNumberFormatterStyle? {
-        return .DecimalStyle
+    public var style: Foundation.NumberFormatter.Style? {
+        return .decimal
     }
     
 }

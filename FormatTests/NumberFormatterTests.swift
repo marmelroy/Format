@@ -25,32 +25,32 @@ class NumberFormatterTests: XCTestCase {
 
     func testDecimalFormattingNone() {
         let number = 45.232313
-        let formattedNumber = number.format(Decimals.None)
+        let formattedNumber = number.format(Decimals.none)
         XCTAssertEqual(formattedNumber, "45")
     }
 
     func testDecimalFormattingOne() {
         let number = 45
-        let formattedNumber = number.format(Decimals.One)
+        let formattedNumber = number.format(Decimals.one)
         XCTAssertEqual(formattedNumber, "45.0")
     }
     
     func testDecimalFormattingTwo() {
         let number = 45.9
-        let formattedNumber = number.format(Decimals.Two)
+        let formattedNumber = number.format(Decimals.two)
         XCTAssertEqual(formattedNumber, "45.90")
     }
 
     func testDecimalFormattingFour() {
         let number = M_PI
-        let formattedNumber = number.format(Decimals.Four)
+        let formattedNumber = number.format(Decimals.four)
         XCTAssertEqual(formattedNumber, "3.1416")
     }
     
     func testDecimalFormattingEuropean() {
         let number = M_PI
-        let frenchLocale = NSLocale(localeIdentifier: "FR")
-        let formattedNumber = number.format(Decimals.Two, locale: frenchLocale)
+        let frenchLocale = Locale(identifier: "FR")
+        let formattedNumber = number.format(Decimals.two, locale: frenchLocale)
         XCTAssertEqual(formattedNumber, "3,14")
     }
     
@@ -60,7 +60,7 @@ class NumberFormatterTests: XCTestCase {
 
     func testCurrencyFormattingDouble() {
         let number = 45.232313
-        let frenchLocale = NSLocale(localeIdentifier: "FR")
+        let frenchLocale = Locale(identifier: "FR")
         let formattedNumberEUR = number.format(Currency.EUR, locale: frenchLocale)
         XCTAssertEqual(formattedNumberEUR, "45,23 €")
         let formattedNumberBTC = number.format(Currency.BTC, locale: frenchLocale)
@@ -88,33 +88,33 @@ class NumberFormatterTests: XCTestCase {
     */
 
     func testOrdinalInt() {
-        let formattedNumberOne = 1.format(General.Ordinal)
+        let formattedNumberOne = 1.format(General.ordinal)
         XCTAssertEqual(formattedNumberOne, "1st")
-        let formattedNumberTwo = 2.format(General.Ordinal)
+        let formattedNumberTwo = 2.format(General.ordinal)
         XCTAssertEqual(formattedNumberTwo, "2nd")
-        let formattedNumberThree = 3.format(General.Ordinal)
+        let formattedNumberThree = 3.format(General.ordinal)
         XCTAssertEqual(formattedNumberThree, "3rd")
-        let formattedNumberTwoHundred = 200.format(General.Ordinal)
+        let formattedNumberTwoHundred = 200.format(General.ordinal)
         XCTAssertEqual(formattedNumberTwoHundred, "200th")
     }
     
     func testOrdinalDouble() {
-        let formattedNumberOne = 1.31231.format(General.Ordinal)
+        let formattedNumberOne = 1.31231.format(General.ordinal)
         XCTAssertEqual(formattedNumberOne, "1st")
-        let formattedNumberTwo = 2.34234.format(General.Ordinal)
+        let formattedNumberTwo = 2.34234.format(General.ordinal)
         XCTAssertEqual(formattedNumberTwo, "2nd")
-        let formattedNumberThree = 3.23232.format(General.Ordinal)
+        let formattedNumberThree = 3.23232.format(General.ordinal)
         XCTAssertEqual(formattedNumberThree, "3rd")
-        let formattedNumberTwoHundred = 200.32121.format(General.Ordinal)
+        let formattedNumberTwoHundred = 200.32121.format(General.ordinal)
         XCTAssertEqual(formattedNumberTwoHundred, "200th")
     }
     
     func testOrdinalRoundDown() {
-        let formattedNumberOne = 3.3.format(General.Ordinal)
+        let formattedNumberOne = 3.3.format(General.ordinal)
         XCTAssertEqual(formattedNumberOne, "3rd")
-        let formattedNumberThree = 3.999.format(General.Ordinal)
+        let formattedNumberThree = 3.999.format(General.ordinal)
         XCTAssertEqual(formattedNumberThree, "3rd")
-        let formattedNumberTwoHundred = 4.00.format(General.Ordinal)
+        let formattedNumberTwoHundred = 4.00.format(General.ordinal)
         XCTAssertEqual(formattedNumberTwoHundred, "4th")
     }
     
@@ -123,27 +123,27 @@ class NumberFormatterTests: XCTestCase {
     */
 
     func testSpellOutInt() {
-        let formattedNumberOne = 1.format(General.SpellOut)
+        let formattedNumberOne = 1.format(General.spellOut)
         XCTAssertEqual(formattedNumberOne, "one")
-        let formattedNumberTwo = 2.format(General.SpellOut)
+        let formattedNumberTwo = 2.format(General.spellOut)
         XCTAssertEqual(formattedNumberTwo, "two")
-        let formattedNumberThree = 3.format(General.SpellOut)
+        let formattedNumberThree = 3.format(General.spellOut)
         XCTAssertEqual(formattedNumberThree, "three")
-        let frenchLocale = NSLocale(localeIdentifier: "FR")
-        let formattedNumberTwoHundred = 200.format(General.SpellOut, locale: frenchLocale)
+        let frenchLocale = Locale(identifier: "FR")
+        let formattedNumberTwoHundred = 200.format(General.spellOut, locale: frenchLocale)
         XCTAssertEqual(formattedNumberTwoHundred, "deux cents")
-        let formattedNumberThreeThousand = 3214.format(General.SpellOut)
+        let formattedNumberThreeThousand = 3214.format(General.spellOut)
         XCTAssertEqual(formattedNumberThreeThousand, "three thousand two hundred fourteen")
     }
 
     func testSpellOutDouble() {
-        let formattedNumberOne = 1.31.format(General.SpellOut)
+        let formattedNumberOne = 1.31.format(General.spellOut)
         XCTAssertEqual(formattedNumberOne, "one point three one")
-        let formattedNumberTwo = 2.342.format(General.SpellOut)
+        let formattedNumberTwo = 2.342.format(General.spellOut)
         XCTAssertEqual(formattedNumberTwo, "two point three four two")
-        let formattedNumberThree = 3.23.format(General.SpellOut)
+        let formattedNumberThree = 3.23.format(General.spellOut)
         XCTAssertEqual(formattedNumberThree, "three point two three")
-        let formattedNumberTwoHundred = 200.00.format(General.SpellOut)
+        let formattedNumberTwoHundred = 200.00.format(General.spellOut)
         XCTAssertEqual(formattedNumberTwoHundred, "two hundred")
     }
 
@@ -153,20 +153,20 @@ class NumberFormatterTests: XCTestCase {
 
     func testDistanceDouble() {
         let number = 45.232313 // meters
-        let formattedNumber = number.format(General.Distance)
+        let formattedNumber = number.format(General.distance)
         XCTAssertEqual(formattedNumber, "150 feet")
     }
     
     func testDistanceNegativeHigh() {
         let number = -212145.232313 // meters
-        let formattedNumber = number.format(General.Distance)
+        let formattedNumber = number.format(General.distance)
         XCTAssertEqual(formattedNumber, "-696,015 feet")
     }
     
     func testDistanceEUR() {
-        let frenchLocale = NSLocale(localeIdentifier: "FR")
+        let frenchLocale = Locale(identifier: "FR")
         let number = 500 // meters
-        let formattedNumber = number.format(General.Distance, locale: frenchLocale)
+        let formattedNumber = number.format(General.distance, locale: frenchLocale)
         XCTAssertEqual(formattedNumber, "500 m")
     }
     
@@ -176,26 +176,26 @@ class NumberFormatterTests: XCTestCase {
     
     func testMassDoublePerson() {
         let number = 67 // kg
-        let formattedNumber = number.format(Mass.Person)
+        let formattedNumber = number.format(Mass.person)
         XCTAssertEqual(formattedNumber, "147.71 lb")
     }
     
     func testMassDoublePersonGeneric() {
         let number = 67 // kg
-        let formattedNumber = number.format(Mass.Generic)
+        let formattedNumber = number.format(Mass.generic)
         XCTAssertEqual(formattedNumber, "147.71 lb")
     }
 
 
     func testMassDoubleZeroGeneric() {
         let number = 0.0 // kg
-        let formattedNumber = number.format(Mass.Generic)
+        let formattedNumber = number.format(Mass.generic)
         XCTAssertEqual(formattedNumber, "0 lb")
     }
     
     func testMassDoubleNegativeGeneric() {
         let number = -10.0 // kg
-        let formattedNumber = number.format(Mass.Generic)
+        let formattedNumber = number.format(Mass.generic)
         XCTAssertEqual(formattedNumber, "-22.046 lb")
     }
 

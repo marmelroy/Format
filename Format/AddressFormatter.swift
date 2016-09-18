@@ -11,7 +11,7 @@ import Contacts
 
 /// Address formatter class.
 @available(iOS 9.0, *)
-public class AddressFormatter {
+open class AddressFormatter {
 
     let postalFormatter = CNPostalAddressFormatter()
 
@@ -34,7 +34,7 @@ public class AddressFormatter {
      
      - returns: Formatted address string using Contacts framework.
      */
-    public func format(street: String?, city: String?, state: String?, postalCode: String?, country: String?, ISOCountryCode: String?) -> String{
+    open func format(_ street: String?, city: String?, state: String?, postalCode: String?, country: String?, ISOCountryCode: String?) -> String{
         let postalAddress = CNMutablePostalAddress()
         if let streetString = street {
             postalAddress.street = streetString
@@ -52,9 +52,9 @@ public class AddressFormatter {
             postalAddress.country = countryString
         }
         if let ISOCountryCodeString = ISOCountryCode {
-            postalAddress.ISOCountryCode = ISOCountryCodeString
+            postalAddress.isoCountryCode = ISOCountryCodeString
         }
-        return postalFormatter.stringFromPostalAddress(postalAddress)
+        return postalFormatter.string(from: postalAddress)
     }
 
 }

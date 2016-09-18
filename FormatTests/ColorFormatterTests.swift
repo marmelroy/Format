@@ -23,7 +23,7 @@ class ColorFormatterTests: XCTestCase {
         let colorFormatter = ColorFormatter()
         let colorToFormat = "ff0000"
         let redColor = colorFormatter.format(colorToFormat)
-        let components = CGColorGetComponents(redColor.CGColor)
+        let components = CGColorGetComponents(redColor.cgColor)
         let normalizedRedComponent = Int(components[0]*255)
         XCTAssertEqual(normalizedRedComponent, 255)
     }
@@ -32,7 +32,7 @@ class ColorFormatterTests: XCTestCase {
         let colorFormatter = ColorFormatter()
         let colorToFormat = "00ff00"
         let greenColor = colorFormatter.format(colorToFormat)
-        let components = CGColorGetComponents(greenColor.CGColor)
+        let components = CGColorGetComponents(greenColor.cgColor)
         let normalizedGreenComponent = Int(components[1]*255)
         XCTAssertEqual(normalizedGreenComponent, 255)
     }
@@ -41,7 +41,7 @@ class ColorFormatterTests: XCTestCase {
         let colorFormatter = ColorFormatter()
         let colorToFormat = "0000ff"
         let blueColor = colorFormatter.format(colorToFormat)
-        let components = CGColorGetComponents(blueColor.CGColor)
+        let components = CGColorGetComponents(blueColor.cgColor)
         let normalizedBlueComponent = Int(components[2]*255)
         XCTAssertEqual(normalizedBlueComponent, 255)
     }
@@ -50,7 +50,7 @@ class ColorFormatterTests: XCTestCase {
         let colorFormatter = ColorFormatter()
         let colorToFormat = "000000"
         let blackColor = colorFormatter.format(colorToFormat)
-        let components = CGColorGetComponents(blackColor.CGColor)
+        let components = CGColorGetComponents(blackColor.cgColor)
         let normalizedBlueComponent = Int(components[2]*255)
         XCTAssertEqual(normalizedBlueComponent, 0)
     }
@@ -59,7 +59,7 @@ class ColorFormatterTests: XCTestCase {
         let colorFormatter = ColorFormatter()
         let colorToFormat = "ffffff"
         let whiteColor = colorFormatter.format(colorToFormat)
-        let components = CGColorGetComponents(whiteColor.CGColor)
+        let components = CGColorGetComponents(whiteColor.cgColor)
         let normalizedBlueComponent = Int(components[2]*255)
         XCTAssertEqual(normalizedBlueComponent, 255)
     }
@@ -68,7 +68,7 @@ class ColorFormatterTests: XCTestCase {
         let colorFormatter = ColorFormatter()
         let colorToFormat = "2ba134"
         let randomColor = colorFormatter.format(colorToFormat)
-        let components = CGColorGetComponents(randomColor.CGColor)
+        let components = CGColorGetComponents(randomColor.cgColor)
         let normalizedBlueComponent = Int(components[2]*255)
         XCTAssertEqual(normalizedBlueComponent, 52)
     }
@@ -77,7 +77,7 @@ class ColorFormatterTests: XCTestCase {
         let colorFormatter = ColorFormatter()
         let colorToFormat = ""
         let randomColor = colorFormatter.format(colorToFormat)
-        let components = CGColorGetComponents(randomColor.CGColor)
+        let components = CGColorGetComponents(randomColor.cgColor)
         let normalizedBlueComponent = Int(components[2]*255)
         XCTAssertEqual(normalizedBlueComponent, 0)
     }

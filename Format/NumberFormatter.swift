@@ -17,10 +17,10 @@ import MapKit
  - General: Type containing ordinal, spell out and distance formatters (meters to local).
  */
 public enum NumberFormatterType {
-    case Currency
-    case Decimal
-    case General
-    case Mass
+    case currency
+    case decimal
+    case general
+    case mass
 }
 
 /**
@@ -29,25 +29,25 @@ public enum NumberFormatterType {
 public protocol NumberFormatter {
     var modifier: String { get }
     var type: NumberFormatterType { get }
-    var style: NSNumberFormatterStyle? { get }
+    var style: Foundation.NumberFormatter.Style? { get }
 }
 
 public protocol NumberFormatterCustomLocaleAvailable: NumberFormatter {}
 
 /// Number format class
-public class NumberFormat {
+open class NumberFormat {
     
     static let sharedInstance = NumberFormat()
     
-    var nsFormatter = NSNumberFormatter()
+    var nsFormatter = Foundation.NumberFormatter()
     
     let distanceFormatter = MKDistanceFormatter()
     
-    let massFormatter = NSMassFormatter()
+    let massFormatter = MassFormatter()
 
-    public func format(number: NSNumber, formatter: NumberFormatter) -> String{
+    open func format(_ number: NSNumber, formatter: NumberFormatter) -> String{
         if let customLocaleFormatter = formatter as? NumberFormatterCustomLocaleAvailable {
-            return format(number, formatter: customLocaleFormatter, locale: NSLocale.currentLocale())
+            return format(number, formatter: customLocaleFormatter, locale: Locale.current)
         }
         else {
             return defaultLocaleOnlyFormat(number, formatter: formatter)
@@ -63,35 +63,35 @@ public class NumberFormat {
      
      - returns: formatted string.
      */
-    public func format(number: NSNumber, formatter: NumberFormatterCustomLocaleAvailable, locale: NSLocale) -> String{
-        if let style = formatter.style where nsFormatter.numberStyle != style {
-            nsFormatter = NSNumberFormatter()
+    open func format(_ number: NSNumber, formatter: NumberFormatterCustomLocaleAvailable, locale: Locale) -> String{
+        if let style = formatter.style , nsFormatter.numberStyle != style {
+            nsFormatter = Foundation.NumberFormatter()
             nsFormatter.numberStyle = style
         }
         nsFormatter.locale = locale
         distanceFormatter.locale = locale
 
         var formattedString: String?
-        if (formatter.type == .Decimal) {
+        if (formatter.type == .decimal) {
             if let modifierAsInt = Int(formatter.modifier) {
                 nsFormatter.maximumFractionDigits = modifierAsInt
                 nsFormatter.minimumFractionDigits = modifierAsInt
             }
-            formattedString = nsFormatter.stringFromNumber(number)
+            formattedString = nsFormatter.string(from: number)
         }
-        if (formatter.type == .Currency) {
+        if (formatter.type == .currency) {
             nsFormatter.currencyCode = formatter.modifier
             nsFormatter.currencySymbol = (nsFormatter.currencyCode == Currency.BTC.modifier) ? "Ƀ" : nil
-            formattedString = nsFormatter.stringFromNumber(number)
+            formattedString = nsFormatter.string(from: number)
         }
-        if (formatter.type == .General) {
+        if (formatter.type == .general) {
             if formatter.modifier == NumberFormatterOrdinalKey {
-                formattedString = nsFormatter.stringFromNumber(floor(number.doubleValue))
+                formattedString = nsFormatter.string(from: NSNumber(value:floor(number.doubleValue)))
             } else if formatter.modifier == NumberFormatterSpellOutKey {
-                formattedString = nsFormatter.stringFromNumber(number)
+                formattedString = nsFormatter.string(from: number)
             } else if formatter.modifier == NumberFormatterDistanceKey {
                 let distance = number as CLLocationDistance
-                formattedString = distanceFormatter.stringFromDistance(distance)
+                formattedString = distanceFormatter.string(fromDistance: distance)
             }
         }
         guard let finalString = formattedString else {
@@ -100,11 +100,11 @@ public class NumberFormat {
         return finalString
     }
     
-    internal func defaultLocaleOnlyFormat(number: NSNumber, formatter: NumberFormatter) -> String {
+    internal func defaultLocaleOnlyFormat(_ number: NSNumber, formatter: NumberFormatter) -> String {
         var formattedString: String?
-        if (formatter.type == .Mass) {
-            massFormatter.forPersonMassUse = (formatter.modifier == MassFormatterPersonKey)
-            formattedString = massFormatter.stringFromKilograms(number.doubleValue)
+        if (formatter.type == .mass) {
+            massFormatter.isForPersonMassUse = (formatter.modifier == MassFormatterPersonKey)
+            formattedString = massFormatter.string(fromKilograms: number.doubleValue)
         }
         guard let finalString = formattedString else {
         return ""
