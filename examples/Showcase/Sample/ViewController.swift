@@ -25,37 +25,37 @@ class ViewController: UIViewController {
         resultLabel.text = "\(randomNumber)"
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
     
     // MARK: Actions
     
-    @IBAction func doApplyDecimalNone(sender: AnyObject) {
-        resultLabel.text = randomNumber.format(Decimals.None)
+    @IBAction func doApplyDecimalNone(_ sender: AnyObject) {
+        resultLabel.text = randomNumber.format(Decimals.none)
     }
     
-    @IBAction func doApplyDecimalThree(sender: AnyObject) {
-        resultLabel.text = randomNumber.format(Decimals.Three)
+    @IBAction func doApplyDecimalThree(_ sender: AnyObject) {
+        resultLabel.text = randomNumber.format(Decimals.three)
     }
     
-    @IBAction func doApplyCurrencyUSD(sender: AnyObject) {
+    @IBAction func doApplyCurrencyUSD(_ sender: AnyObject) {
         resultLabel.text = randomNumber.format(Currency.USD)
     }
     
-    @IBAction func doApplyGeneralOrdinal(sender: AnyObject) {
-        resultLabel.text = randomNumber.format(General.Ordinal)
+    @IBAction func doApplyGeneralOrdinal(_ sender: AnyObject) {
+        resultLabel.text = randomNumber.format(General.ordinal)
     }
     
-    @IBAction func doApplyGeneralSpellOut(sender: AnyObject) {
-        resultLabel.text = randomNumber.format(General.SpellOut)
+    @IBAction func doApplyGeneralSpellOut(_ sender: AnyObject) {
+        resultLabel.text = randomNumber.format(General.spellOut)
     }
     
-    @IBAction func doApplyAddress(sender: AnyObject) {
+    @IBAction func doApplyAddress(_ sender: AnyObject) {
         let location = CLLocation(latitude: 38.897609, longitude: -77.036735)
         
         CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error) -> Void in
@@ -69,12 +69,12 @@ class ViewController: UIViewController {
         })
     }
     
-    @IBAction func doApplyColor(sender: AnyObject) {
+    @IBAction func doApplyColor(_ sender: AnyObject) {
         view.backgroundColor = ColorFormatter().format("24e7a9")
     }
     
-    @IBAction func doApplyGeneralDistance(sender: AnyObject) {
-        resultLabel.text = randomNumber.format(General.Distance)
+    @IBAction func doApplyGeneralDistance(_ sender: AnyObject) {
+        resultLabel.text = randomNumber.format(General.distance)
     }
 }
 
