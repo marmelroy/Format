@@ -18,25 +18,25 @@ import Format
 
 Format provides a formatting extension for all number types. To format an Int to two decimal places:
 ```swift
-let formattedNumber = 45.format(Decimals.Two) // 45.00
+let formattedNumber = 45.format(Decimals.two) // 45.00
 ```
 
 Format defaults to the user's current locale but a custom locale can be easily provided:
 ```swift
-let frLocale = NSLocale(localeIdentifier: "FR")
-let gbLocale = NSLocale(localeIdentifier: "GB")
+let frLocale = Locale(identifier: "FR")
+let gbLocale = Locale(identifier: "GB")
 let formattedFRNumber = 99.format(Currency.EUR, locale: frLocale) // 99,00 €
 let formattedGBNumber = 99.format(Currency.GBP, locale: gbLocale) // £ 99.00
 ```
 
 Apply any of these formatters to any number type:
 ```swift
-Decimals.Three // 10.123
+Decimals.three // 10.123
 Currency.USD // $10.12
-General.Ordinal // 10th (iOS9+ only)
-General.SpellOut // ten point one two three
-General.Distance // 30 feet
-Mass.Person // 67 kg
+General.ordinal // 10th (iOS9+ only)
+General.spellOut // ten point one two three
+General.distance // 30 feet
+Mass.person // 67 kg
 ```
 
 The distance formatter assumes the number represents the distance in meters before converting and formatting it to the current locale's preferred unit.
@@ -86,5 +86,5 @@ github "marmelroy/Format"
 ### Setting up with [CocoaPods](http://cocoapods.org/?q=PhoneNumberKit)
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-pod 'Format', '~> 0.3'
+pod 'Format', '~> 0.5'
 ```

@@ -36,7 +36,7 @@ public protocol NumberFormatProvider {
      Returns the transformation of the current number as a `String` based on the provided locale.
      
      - parameter formatter: A `NumberFormat` which will be used to transform the number.
-     - parameter locale:    The `NSLocale` which will be used to transform the number.
+     - parameter locale:    The `Locale` which will be used to transform the number.
      
      - returns: A string which corresponds to the transformed value of the number according to the
      `NumberFormat` provided.
