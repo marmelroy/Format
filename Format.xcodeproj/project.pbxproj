@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		340E40E71BFB3C200054B560 /* ColorFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340E40E61BFB3C200054B560 /* ColorFormatter.swift */; };
 		340F3D111BF5E17F000C2EA8 /* Format.h in Headers */ = {isa = PBXBuildFile; fileRef = 340F3D101BF5E17F000C2EA8 /* Format.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		340F3D181BF5E17F000C2EA8 /* Format.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 340F3D0D1BF5E17F000C2EA8 /* Format.framework */; };
-		340F3D2B1BF5E1DE000C2EA8 /* NumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340F3D2A1BF5E1DE000C2EA8 /* NumberExtensions.swift */; };
-		340F3D2D1BF5E1F1000C2EA8 /* Decimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340F3D2C1BF5E1F1000C2EA8 /* Decimals.swift */; };
-		340F3D2F1BF5E213000C2EA8 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340F3D2E1BF5E213000C2EA8 /* NumberFormatter.swift */; };
-		341F272E1BFA3D7800D83C8B /* AddressFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F272D1BFA3D7800D83C8B /* AddressFormatter.swift */; };
 		341FBCD91BFB9E6F009EB89F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 341FBCD81BFB9E6F009EB89F /* MapKit.framework */; };
 		34201C811BF89E1900BB990D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34201C801BF89E1900BB990D /* AddressBook.framework */; };
-		345E9B741BF8826100A88BD7 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E9B731BF8826100A88BD7 /* Currency.swift */; };
-		345E9B761BF88CF900A88BD7 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E9B751BF88CF900A88BD7 /* General.swift */; };
-		345E9B781BF88F4500A88BD7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E9B771BF88F4500A88BD7 /* Constants.swift */; };
-		345E9B7D1BF892F900A88BD7 /* AddressExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E9B7C1BF892F900A88BD7 /* AddressExtensions.swift */; };
 		345E9B801BF8931B00A88BD7 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345E9B7F1BF8931B00A88BD7 /* Contacts.framework */; };
 		345E9B821BF8932000A88BD7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345E9B811BF8932000A88BD7 /* CoreLocation.framework */; };
 		34C74C121C0533E400B4342B /* ColorFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C74C111C0533E400B4342B /* ColorFormatterTests.swift */; };
 		34C74C141C05392D00B4342B /* NumberFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C74C131C05392D00B4342B /* NumberFormatterTests.swift */; };
-		34FA3E471C5FB80A000442D3 /* Mass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FA3E461C5FB80A000442D3 /* Mass.swift */; };
+		D5FC9004213F858500610D99 /* AddressFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC8FF8213F858500610D99 /* AddressFormatter.swift */; };
+		D5FC9005213F858500610D99 /* AddressExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC8FF9213F858500610D99 /* AddressExtensions.swift */; };
+		D5FC9006213F858500610D99 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC8FFB213F858500610D99 /* Constants.swift */; };
+		D5FC9007213F858500610D99 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC8FFC213F858500610D99 /* NumberFormatter.swift */; };
+		D5FC9008213F858500610D99 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC8FFD213F858500610D99 /* General.swift */; };
+		D5FC9009213F858500610D99 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC8FFE213F858500610D99 /* Currency.swift */; };
+		D5FC900A213F858500610D99 /* NumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC8FFF213F858500610D99 /* NumberExtensions.swift */; };
+		D5FC900B213F858500610D99 /* Mass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC9000213F858500610D99 /* Mass.swift */; };
+		D5FC900C213F858500610D99 /* Decimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC9001213F858500610D99 /* Decimals.swift */; };
+		D5FC900D213F858500610D99 /* ColorFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC9003213F858500610D99 /* ColorFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,27 +38,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		340E40E61BFB3C200054B560 /* ColorFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorFormatter.swift; sourceTree = "<group>"; };
 		340F3D0D1BF5E17F000C2EA8 /* Format.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Format.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		340F3D101BF5E17F000C2EA8 /* Format.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Format.h; sourceTree = "<group>"; };
 		340F3D121BF5E17F000C2EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		340F3D171BF5E17F000C2EA8 /* FormatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		340F3D1E1BF5E17F000C2EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		340F3D2A1BF5E1DE000C2EA8 /* NumberExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberExtensions.swift; sourceTree = "<group>"; };
-		340F3D2C1BF5E1F1000C2EA8 /* Decimals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decimals.swift; sourceTree = "<group>"; };
-		340F3D2E1BF5E213000C2EA8 /* NumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
-		341F272D1BFA3D7800D83C8B /* AddressFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressFormatter.swift; sourceTree = "<group>"; };
 		341FBCD81BFB9E6F009EB89F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		34201C801BF89E1900BB990D /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		345E9B731BF8826100A88BD7 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
-		345E9B751BF88CF900A88BD7 /* General.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
-		345E9B771BF88F4500A88BD7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		345E9B7C1BF892F900A88BD7 /* AddressExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressExtensions.swift; sourceTree = "<group>"; };
 		345E9B7F1BF8931B00A88BD7 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 		345E9B811BF8932000A88BD7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		34C74C111C0533E400B4342B /* ColorFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorFormatterTests.swift; sourceTree = "<group>"; };
 		34C74C131C05392D00B4342B /* NumberFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFormatterTests.swift; sourceTree = "<group>"; };
-		34FA3E461C5FB80A000442D3 /* Mass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mass.swift; sourceTree = "<group>"; };
+		D5FC8FF8213F858500610D99 /* AddressFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressFormatter.swift; sourceTree = "<group>"; };
+		D5FC8FF9213F858500610D99 /* AddressExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressExtensions.swift; sourceTree = "<group>"; };
+		D5FC8FFB213F858500610D99 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D5FC8FFC213F858500610D99 /* NumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
+		D5FC8FFD213F858500610D99 /* General.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
+		D5FC8FFE213F858500610D99 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		D5FC8FFF213F858500610D99 /* NumberExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberExtensions.swift; sourceTree = "<group>"; };
+		D5FC9000213F858500610D99 /* Mass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mass.swift; sourceTree = "<group>"; };
+		D5FC9001213F858500610D99 /* Decimals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decimals.swift; sourceTree = "<group>"; };
+		D5FC9003213F858500610D99 /* ColorFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,14 +84,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		340E40E21BFB3B9C0054B560 /* Color */ = {
-			isa = PBXGroup;
-			children = (
-				340E40E61BFB3C200054B560 /* ColorFormatter.swift */,
-			);
-			name = Color;
-			sourceTree = "<group>";
-		};
 		340F3D031BF5E17F000C2EA8 = {
 			isa = PBXGroup;
 			children = (
@@ -113,13 +105,12 @@
 		340F3D0F1BF5E17F000C2EA8 /* Format */ = {
 			isa = PBXGroup;
 			children = (
-				345E9B791BF8927F00A88BD7 /* Address */,
-				340E40E21BFB3B9C0054B560 /* Color */,
-				340F3D271BF5E1B7000C2EA8 /* Numbers */,
+				D5FC8FF7213F858500610D99 /* Address */,
+				D5FC9002213F858500610D99 /* Color */,
+				D5FC8FFA213F858500610D99 /* Number */,
 				340F3D101BF5E17F000C2EA8 /* Format.h */,
 				345E9B7E1BF8930600A88BD7 /* Frameworks */,
 				340F3D121BF5E17F000C2EA8 /* Info.plist */,
-				345E9B771BF88F4500A88BD7 /* Constants.swift */,
 			);
 			path = Format;
 			sourceTree = "<group>";
@@ -134,28 +125,6 @@
 			path = FormatTests;
 			sourceTree = "<group>";
 		};
-		340F3D271BF5E1B7000C2EA8 /* Numbers */ = {
-			isa = PBXGroup;
-			children = (
-				340F3D2A1BF5E1DE000C2EA8 /* NumberExtensions.swift */,
-				340F3D2E1BF5E213000C2EA8 /* NumberFormatter.swift */,
-				340F3D2C1BF5E1F1000C2EA8 /* Decimals.swift */,
-				345E9B731BF8826100A88BD7 /* Currency.swift */,
-				345E9B751BF88CF900A88BD7 /* General.swift */,
-				34FA3E461C5FB80A000442D3 /* Mass.swift */,
-			);
-			name = Numbers;
-			sourceTree = "<group>";
-		};
-		345E9B791BF8927F00A88BD7 /* Address */ = {
-			isa = PBXGroup;
-			children = (
-				345E9B7C1BF892F900A88BD7 /* AddressExtensions.swift */,
-				341F272D1BFA3D7800D83C8B /* AddressFormatter.swift */,
-			);
-			name = Address;
-			sourceTree = "<group>";
-		};
 		345E9B7E1BF8930600A88BD7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +134,37 @@
 				345E9B7F1BF8931B00A88BD7 /* Contacts.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5FC8FF7213F858500610D99 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				D5FC8FF8213F858500610D99 /* AddressFormatter.swift */,
+				D5FC8FF9213F858500610D99 /* AddressExtensions.swift */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		D5FC8FFA213F858500610D99 /* Number */ = {
+			isa = PBXGroup;
+			children = (
+				D5FC8FFB213F858500610D99 /* Constants.swift */,
+				D5FC8FFC213F858500610D99 /* NumberFormatter.swift */,
+				D5FC8FFD213F858500610D99 /* General.swift */,
+				D5FC8FFE213F858500610D99 /* Currency.swift */,
+				D5FC8FFF213F858500610D99 /* NumberExtensions.swift */,
+				D5FC9000213F858500610D99 /* Mass.swift */,
+				D5FC9001213F858500610D99 /* Decimals.swift */,
+			);
+			path = Number;
+			sourceTree = "<group>";
+		};
+		D5FC9002213F858500610D99 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				D5FC9003213F858500610D99 /* ColorFormatter.swift */,
+			);
+			path = Color;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,16 +277,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				345E9B7D1BF892F900A88BD7 /* AddressExtensions.swift in Sources */,
-				345E9B741BF8826100A88BD7 /* Currency.swift in Sources */,
-				340E40E71BFB3C200054B560 /* ColorFormatter.swift in Sources */,
-				345E9B781BF88F4500A88BD7 /* Constants.swift in Sources */,
-				341F272E1BFA3D7800D83C8B /* AddressFormatter.swift in Sources */,
-				345E9B761BF88CF900A88BD7 /* General.swift in Sources */,
-				340F3D2B1BF5E1DE000C2EA8 /* NumberExtensions.swift in Sources */,
-				340F3D2F1BF5E213000C2EA8 /* NumberFormatter.swift in Sources */,
-				340F3D2D1BF5E1F1000C2EA8 /* Decimals.swift in Sources */,
-				34FA3E471C5FB80A000442D3 /* Mass.swift in Sources */,
+				D5FC9009213F858500610D99 /* Currency.swift in Sources */,
+				D5FC900B213F858500610D99 /* Mass.swift in Sources */,
+				D5FC9005213F858500610D99 /* AddressExtensions.swift in Sources */,
+				D5FC9007213F858500610D99 /* NumberFormatter.swift in Sources */,
+				D5FC900D213F858500610D99 /* ColorFormatter.swift in Sources */,
+				D5FC9004213F858500610D99 /* AddressFormatter.swift in Sources */,
+				D5FC900C213F858500610D99 /* Decimals.swift in Sources */,
+				D5FC9006213F858500610D99 /* Constants.swift in Sources */,
+				D5FC9008213F858500610D99 /* General.swift in Sources */,
+				D5FC900A213F858500610D99 /* NumberExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +448,7 @@
 		340F3D251BF5E17F000C2EA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = FormatTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.roymarmelstein.FormatTests;
@@ -459,6 +460,7 @@
 		340F3D261BF5E17F000C2EA8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = FormatTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.roymarmelstein.FormatTests;
