@@ -38,8 +38,6 @@ public protocol NumberFormatterCustomLocaleAvailable: NumberFormatter {}
 /// Number format class
 open class NumberFormat {
     
-    static let sharedInstance = NumberFormat()
-    
     var nsFormatter = Foundation.NumberFormatter()
     
     let distanceFormatter = MKDistanceFormatter()
