@@ -25,6 +25,7 @@
 		34C74C121C0533E400B4342B /* ColorFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C74C111C0533E400B4342B /* ColorFormatterTests.swift */; };
 		34C74C141C05392D00B4342B /* NumberFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C74C131C05392D00B4342B /* NumberFormatterTests.swift */; };
 		34FA3E471C5FB80A000442D3 /* Mass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FA3E461C5FB80A000442D3 /* Mass.swift */; };
+		D5FC8FF6213F68A200610D99 /* Separator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC8FF5213F68A200610D99 /* Separator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		34C74C111C0533E400B4342B /* ColorFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorFormatterTests.swift; sourceTree = "<group>"; };
 		34C74C131C05392D00B4342B /* NumberFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFormatterTests.swift; sourceTree = "<group>"; };
 		34FA3E461C5FB80A000442D3 /* Mass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mass.swift; sourceTree = "<group>"; };
+		D5FC8FF5213F68A200610D99 /* Separator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Separator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				345E9B731BF8826100A88BD7 /* Currency.swift */,
 				345E9B751BF88CF900A88BD7 /* General.swift */,
 				34FA3E461C5FB80A000442D3 /* Mass.swift */,
+				D5FC8FF5213F68A200610D99 /* Separator.swift */,
 			);
 			name = Numbers;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			files = (
 				345E9B7D1BF892F900A88BD7 /* AddressExtensions.swift in Sources */,
 				345E9B741BF8826100A88BD7 /* Currency.swift in Sources */,
+				D5FC8FF6213F68A200610D99 /* Separator.swift in Sources */,
 				340E40E71BFB3C200054B560 /* ColorFormatter.swift in Sources */,
 				345E9B781BF88F4500A88BD7 /* Constants.swift in Sources */,
 				341F272E1BFA3D7800D83C8B /* AddressFormatter.swift in Sources */,

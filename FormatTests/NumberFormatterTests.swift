@@ -55,6 +55,35 @@ class NumberFormatterTests: XCTestCase {
     }
     
     /**
+     Separator
+     */
+    
+    func testCommaSeparator() {
+        let number = 1000000
+        let formattedNumber = number.format(Separator.comma(spacing: 3))
+        XCTAssertEqual(formattedNumber, "1,000,000")
+    }
+    
+    func testDotSeparator() {
+        let number = 1000000
+        let formattedNumber = number.format(Separator.dot(spacing: 3))
+        XCTAssertEqual(formattedNumber, "1.000.000")
+    }
+    
+    func testCustomSeparator() {
+        let number = 1000000
+        let formattedNumber = number.format(Separator.custom(separator: "|", spacing: 3))
+        XCTAssertEqual(formattedNumber, "1|000|000")
+    }
+    
+    func testCustomSpacing() {
+        let number = 1000000
+        let formattedNumber = number.format(Separator.comma(spacing: 2))
+        XCTAssertEqual(formattedNumber, "1,00,00,00")
+    }
+    
+    
+    /**
     Currency
     */
 

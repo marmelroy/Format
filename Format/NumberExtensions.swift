@@ -50,12 +50,12 @@ public protocol NumberFormatProvider {
 extension NumberFormatProvider {
     
     public func format(_ formatter: NumberFormatter) -> String {
-        let formattedNumber = NumberFormat.sharedInstance.format(formatNumber(), formatter: formatter)
+        let formattedNumber = NumberFormat().format(formatNumber(), formatter: formatter)
         return formattedNumber
     }
 
     public func format(_ formatter: NumberFormatterCustomLocaleAvailable, locale: Locale) -> String {
-        let formattedNumber = NumberFormat.sharedInstance.format(formatNumber(), formatter: formatter, locale: locale)
+        let formattedNumber = NumberFormat().format(formatNumber(), formatter: formatter, locale: locale)
         return formattedNumber
     }
 }

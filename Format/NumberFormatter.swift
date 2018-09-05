@@ -20,6 +20,7 @@ public enum NumberFormatterType {
     case currency
     case decimal
     case general
+    case separator
     case mass
 }
 
@@ -36,8 +37,6 @@ public protocol NumberFormatterCustomLocaleAvailable: NumberFormatter {}
 
 /// Number format class
 open class NumberFormat {
-    
-    static let sharedInstance = NumberFormat()
     
     var nsFormatter = Foundation.NumberFormatter()
     
@@ -93,6 +92,20 @@ open class NumberFormat {
                 let distance = number as CLLocationDistance
                 formattedString = distanceFormatter.string(fromDistance: distance)
             }
+        }
+        if let separatorFormatter = formatter as? Separator {
+            switch separatorFormatter {
+                case .comma(let spacing),
+                     .dot(let spacing),
+                     .semicolon(let spacing),
+                     .space(let spacing),
+                     .custom(_, let spacing):
+                
+                nsFormatter.groupingSize = spacing
+            }
+            nsFormatter.usesGroupingSeparator = true
+            nsFormatter.groupingSeparator = separatorFormatter.modifier
+            formattedString = nsFormatter.string(from: number)
         }
         guard let finalString = formattedString else {
             return ""
