@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   ## Subspec for Each formatter type
   s.subspec 'Number' do |ss|
     ss.requires_arc = true
-    ss.source_files = "Format/Numbers"
+    ss.source_files = "Format/Number"
   end
 
   s.subspec 'Color' do |ss|
