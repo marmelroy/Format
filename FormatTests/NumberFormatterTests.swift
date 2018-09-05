@@ -55,6 +55,17 @@ class NumberFormatterTests: XCTestCase {
     }
     
     /**
+     Separator
+     */
+    
+    func testCommaSeparator() {
+        let number = 1000000
+        let formattedNumber = number.format(Separator.comma, spacing: 3)
+        XCTAssertEqual(formattedNumber, "1.000.000")
+    }
+    
+    
+    /**
     Currency
     */
 
